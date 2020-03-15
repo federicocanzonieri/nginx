@@ -2,7 +2,7 @@
   echo "prova aggiornato";
   
 
-  $dbServerName = "172.30.14.204";
+  $dbServerName = "172.30.14.204:3306";
   $dbUsername = "user";
   $dbPassword = "user";
   $dbName = "sampledb";
