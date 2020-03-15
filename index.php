@@ -5,7 +5,7 @@
   $dbServerName = "10.128.1.5";
   $dbUsername = getenv("DB_USER");
   $dbPassword = getenv("DB_PASS");
-  $dbName = getenv("DB_NAME");
+  $dbName = "sampledb"
   
   echo $dbUsername;
   echo $dbPassword; 
