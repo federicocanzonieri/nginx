@@ -1,22 +1,15 @@
-<?php 
-  echo "prova aggiornato";
-  
+<?php
+$dbhost = getenv("MYSQL_SERVICE_HOST");
+$dbport = getenv("MYSQL_SERVICE_PORT");
+$dbuser = getenv("databaseuser");
+$dbpwd = getenv("databasepassword");
+$dbname = getenv("databasename");
 
-  $dbServerName = "172.30.14.204:3306";
-  $dbUsername = "user";
-  $dbPassword = "user";
-  $dbName = "sampledb";
-  
-  echo $dbUsername;
-  echo $dbPassword; 
-  echo $dbName;
-  // create connection
-  $conn = new mysqli($dbServerName, $dbUsername, $dbPassword, $dbName);
-
-  // check connection
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
-  echo "Connected successfully";
-
-?>
+$connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
+if ($connection->connect_errno) {
+    printf("Connect failed: %s\n", $mysqli->connect_error);
+    exit();
+} else {
+    printf("Connected to the database");
+}
+$connection->close();
