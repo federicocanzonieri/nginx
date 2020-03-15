@@ -3,7 +3,7 @@
 
   $dbServerName = "10.128.0.243:3306";
   $dbUsername = "root";
-  $dbPassword = "root";
+  $dbPassword = "";
   $dbName = "mysql";
 
   // create connection
