@@ -5,7 +5,7 @@
   $dbServerName = "10.128.0.244";
   $dbUsername = "user";
   $dbPassword = "user";
-  $dbName = "sampledb"
+  $dbName = "sampledb";
   
   echo $dbUsername;
   echo $dbPassword; 
