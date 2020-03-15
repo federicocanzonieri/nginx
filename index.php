@@ -1,7 +1,7 @@
 <?php 
   echo "prova";
 
-  $dbServerName = "10.128.0.243";
+  $dbServerName = "10.128.0.243:3306";
   $dbUsername = "root";
   $dbPassword = "root";
   $dbName = "mysql";
