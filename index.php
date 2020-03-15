@@ -1,5 +1,5 @@
 <?php 
-  echo "prova";
+  echo "prova aggiornato";
 
   $dbServerName = "10.128.0.243:3306";
   $dbUsername = "root";
