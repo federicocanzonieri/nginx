@@ -2,9 +2,9 @@
   echo "prova aggiornato";
   
 
-  $dbServerName = "10.128.1.5";
-  $dbUsername = getenv("DB_USER");
-  $dbPassword = getenv("DB_PASS");
+  $dbServerName = "10.128.0.244";
+  $dbUsername = "user";
+  $dbPassword = "user";
   $dbName = "sampledb"
   
   echo $dbUsername;
