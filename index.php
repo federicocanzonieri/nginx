@@ -1,9 +1,9 @@
 <?php 
   echo "prova aggiornato";
 
-  $dbServerName = "10.128.0.243:3306";
-  $dbUsername = "root";
-  $dbPassword = "";
+  $dbServerName = "10.128.0.243";
+  $dbUsername = "user";
+  $dbPassword = "user";
   $dbName = "mysql";
 
   // create connection
