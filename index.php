@@ -2,9 +2,9 @@
   echo "prova aggiornato";
 
   $dbServerName = "10.128.0.243";
-  $dbUsername = "user";
-  $dbPassword = "user";
-  $dbName = "mysql";
+  $dbUsername = getenv("DB_USER");
+  $dbPassword = getenv("DB_PASS");
+  $dbName = getenv("DB_NAME");
 
   // create connection
   $conn = new mysqli($dbServerName, $dbUsername, $dbPassword, $dbName);
