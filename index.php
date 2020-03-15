@@ -9,7 +9,7 @@
   
   echo $dbUsername;
   echo $dbPassword; 
-  echo $dbName
+  echo $dbName;
   // create connection
   $conn = new mysqli($dbServerName, $dbUsername, $dbPassword, $dbName);
 
