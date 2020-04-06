@@ -1,0 +1,14 @@
+ node{
+  stage 'build & deploy in dev'
+  
+  openshift.withCluster(){
+            openshift.withProject(){
+                 openshift.startBuild('nginx-git')
+            }
+      
+  }
+  //openshift.newApp("nginx")
+ 
+  stage 'build & deploy in dv'
+  stage 'build & deploy in dereev'
+ }
