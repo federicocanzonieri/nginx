@@ -17,5 +17,11 @@ if ($connection->connect_errno) {
 $connection->close();
 
 */
-
-echo "ciao carissimo";
+echo "ciao carissimo";?>
+<html> 
+    <head></head>
+    <body>
+        <script>
+            alert("Ciao");
+            
+        </script>
