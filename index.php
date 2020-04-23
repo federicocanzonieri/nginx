@@ -24,5 +24,8 @@ echo "ciao carissimo";?>
     </head>
     <body>
        
+        <button onclick="myFunction()">Click me</button>
+        
+        <p id="demo"></p>
             <script src="nome.js"></script>
         
