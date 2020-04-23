@@ -19,9 +19,10 @@ $connection->close();
 */
 echo "ciao carissimo";?>
 <html> 
-    <head></head>
+    <head>
+        
+    </head>
     <body>
-        <script>
-            alert("Ciao");
-            
-        </script>
+       
+            <script src="nome.js"></script>
+        
