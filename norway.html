@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+            body{ 
+                margin: 0;
+                padding: 0;
+            }
+            .main-container{ 
+                background-image: url("norway.jpeg");
+                width: 100%;
+                height: 100vh;
+                background-position: center bottom;
+                background-size: cover;
+             }
+             .navbar{ 
+                height: 10vh ;
+                position: relative;
+                
+
+            }
+            .navbar>.logo{ 
+                display:inline-block;
+                padding: 20px;
+                margin-left: 50px;
+                font-size: 1.4em;
+                font-family: sans-serif;
+            }
+            .navbar>.logo::after{ 
+                margin-left:5px;
+                display:inline-block;
+                content: "HBC";
+                font-weight: bold;
+                letter-spacing: 2px;
+                background-color: white;
+                color: black;
+                text-align: center;
+            
+            }
+            
+            .white-txt{
+                color: white;
+            } 
+
+            .navbar > .list-item > .item{
+                display: inline-block;
+                margin: 0 20px;
+               
+                
+            } 
+            .navbar > .list-item > .item:hover,.active{
+                border-bottom: 2px solid white;
+            }
+            /*
+            .navbar > .list-item > .item:hover::after{
+                display: block;
+                content: '';
+                width: 100%;
+                height: 1vh;
+                
+                border-radius: 5px;
+                background-color: white;
+            } 
+            */
+            .navbar > .list-item {
+                margin: 0;
+                padding: 0;
+                display: inline-block;
+                position: absolute;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                right: 0;
+                padding: 20px;
+                font-size: 1.3em;
+            } 
+
+
+            .main-content{
+                position: relative;
+                height: 60vh;
+               
+                margin: 0 auto;
+            }
+            .main-content>.main-title{
+                position: relative;
+                display: inline-block;
+                width: 49%;
+                height: 60vh;
+                
+                
+            }
+            .main-content > .main-author{
+                display: inline-block;
+                width: 49%;
+                height: 60vh;
+               
+                position: relative;
+            }
+
+            .main-content>.main-title>.title{
+                position: absolute;
+                
+                width: 55%;
+                margin: 10px 50px;
+                font-size: 7em;
+               
+                display: block;
+
+            }
+            .main-content>.main-title>.title>.summary{
+                position: relative;
+               
+                text-transform: lowercase;
+                margin: 30px 0;
+                font-size: 20px;
+                
+            }
+            .main-content>.main-title>.title>.btn-register{
+                position: relative;
+                font-size: 18px;
+                margin-top: 40px;
+                width: 50%;
+                height: 8vh;  
+                text-align: center;  
+                line-height: 50px;
+                border-radius: 6px;
+                background-color: rgb(221, 10, 10);            
+            }
+            
+
+            .main-content>.main-author>.author{
+               
+                transform: rotateZ(90deg);
+                
+                display: block;
+                right: -20%;
+                top: 50%;
+                font-size: 17px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                margin: 20px 10px;
+               
+                position: absolute ;
+            }
+            .author::before{
+                display: inline-block;
+                
+                content: '------------';
+                position: relative;
+               
+                bottom: 0;
+            }
+
+            .main-discover{
+                height: 20vh;
+               
+                position: relative;
+            }
+            .row {
+                position: relative;
+                width: 99%;
+                
+                display: inline-block;
+            }
+            .box {
+                position: relative;
+                display: inline-block;
+                width: 10%;
+                height: 20vh;
+               
+            }
+            .text-box{
+                width: 25%;
+                
+                
+            }
+            .text{
+                position: absolute;
+                padding: 10px 50px;
+                font-size: 1.3em;
+                font-weight: bold;
+                font-family: sans-serif;
+            }
+            .text>.summary{
+                font-weight: 100;
+                position: absolute;
+                margin: 20px 0;
+                font-size: 0.7em;
+            }
+            .right{
+                
+                float: right;
+            }
+            .img{
+               width: 16%;
+               background-position: center;
+               background-size: cover;
+            }
+            .prima{
+               background-image: url("norway-1.jpeg");
+            }
+            .seconda{
+                background-image: url("norway-2.jpg");
+            }
+            .terza{
+                background-image: url("norway-3.jpg");
+            }
+            .quarto{
+                background-image: url("norway-4.jpeg");
+            }
+            .mlr-30{
+                margin: 0 10px;
+
+            }
+            .logo-fav{
+                margin: 8x;
+            }
+            .white-bg{
+               fill: white;
+            }
+    </style>
+
+
+
+</head>
+<body>
+
+
+    <div class="main-container">
+        <div class="navbar white-txt">
+            <span class="logo">TRAVEL</span>
+            <ul class="list-item">
+                <li class="item active">HOME</li>
+                <li class="item">TOUR</li>
+                <li class="item">PLACES</li>
+                <li class="item">EXPERIENCEs</li>
+                <li class="item">SEARCH ICONE</li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="main-title">
+                <div class="title white-txt">
+                    Norway
+                    <div class="summary">
+                        Explore this amazing country today,GIVE US ONLY ONE CHANCE to show new world and culture
+                    </div>
+                    <div class="btn-register">
+                        Start NOW!!
+                    </div>
+                </div>
+               
+            </div>
+            <div class="main-author">
+                <div class="author white-txt">
+                    NORWAY BEST PARK TEST  
+                </div>
+            </div>
+            <div class="logo-fav">
+                <div class="row  ">
+                    <div class="right mlr-30 ">
+                        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             width="40.75px" height="40.75px" viewBox="0 0 97.75 97.75" style="enable-background:new 0 0 97.75 97.75;" xml:space="preserve"
+                            >
+                        <g>
+                            <path style="fill: white;" d="M48.875,0C21.882,0,0,21.882,0,48.875S21.882,97.75,48.875,97.75S97.75,75.868,97.75,48.875S75.868,0,48.875,0z
+                                 M78.43,35.841c0.023,0.577,0.035,1.155,0.035,1.736c0,20.878-15.887,42.473-42.473,42.473c-8.127,0-16.04-2.319-22.883-6.708
+                                c-0.143-0.091-0.202-0.268-0.145-0.427c0.057-0.158,0.218-0.256,0.383-0.237c1.148,0.137,2.322,0.205,3.487,0.205
+                                c6.323,0,12.309-1.955,17.372-5.664c-6.069-0.512-11.285-4.619-13.161-10.478c-0.039-0.122-0.011-0.255,0.073-0.351
+                                c0.085-0.096,0.215-0.138,0.339-0.115c1.682,0.319,3.392,0.34,5.04,0.072c-6.259-1.945-10.658-7.808-10.658-14.483l0.002-0.194
+                                c0.003-0.127,0.072-0.243,0.182-0.306c0.109-0.064,0.245-0.065,0.355-0.003c1.632,0.906,3.438,1.488,5.291,1.711
+                                c-3.597-2.867-5.709-7.213-5.709-11.862c0-2.682,0.71-5.318,2.054-7.623c0.06-0.103,0.166-0.169,0.284-0.178
+                                c0.119-0.012,0.234,0.04,0.309,0.132c7.362,9.03,18.191,14.59,29.771,15.305c-0.193-0.972-0.291-1.974-0.291-2.985
+                                c0-8.361,6.802-15.162,15.162-15.162c4.11,0,8.082,1.689,10.929,4.641c3.209-0.654,6.266-1.834,9.09-3.508
+                                c0.129-0.077,0.291-0.065,0.41,0.028c0.116,0.094,0.164,0.25,0.118,0.394c-0.957,2.993-2.823,5.604-5.33,7.489
+                                c2.361-0.411,4.652-1.105,6.831-2.072c0.146-0.067,0.319-0.025,0.424,0.098c0.104,0.124,0.113,0.301,0.023,0.435
+                                C83.759,31.175,81.299,33.744,78.43,35.841z"/>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        </svg>
+                    </div>
+                    <div class="right mlr-30">
+                        <svg version="1.1 " width="40.75px" height="40.75px" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 167.657 167.657" style="enable-background:new 0 0 167.657 167.657;" xml:space="preserve">
+<g>
+	<path class="white-bg" style="fill:#e0d7e9;" d="M83.829,0.349C37.532,0.349,0,37.881,0,84.178c0,41.523,30.222,75.911,69.848,82.57v-65.081H49.626
+		v-23.42h20.222V60.978c0-20.037,12.238-30.956,30.115-30.956c8.562,0,15.92,0.638,18.056,0.919v20.944l-12.399,0.006
+		c-9.72,0-11.594,4.618-11.594,11.397v14.947h23.193l-3.025,23.42H94.026v65.653c41.476-5.048,73.631-40.312,73.631-83.154
+		C167.657,37.881,130.125,0.349,83.829,0.349z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+
+                    </div>
+                </div>
+            </div>
+            <div class="main-discover white-txt">
+                <div class="row">
+                    <div class="box text-box">
+                        <div class="text">
+                            Discover Places
+                            <div class="summary">
+                               sjdasjdoa sdaos dkaod ksao dkasod sakd aoskdoa ks
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="box right img prima">
+                        
+                    </div>
+                    <div class="box right img seconda">
+                        
+                    </div>
+                    <div class="box right img terza">
+                         
+                    </div>
+                    <div class="box right img quarto">
+                        
+                   </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
