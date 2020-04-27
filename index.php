@@ -18,7 +18,7 @@ if ($connection->connect_errno) {
     exit();
 } else {
     printf("Connected to the database");
-    $sql = "CREATE TABLE Movie (
+    /*$sql = "CREATE TABLE Movie (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(30) NOT NULL,
     trama VARCHAR(255) NOT NULL,
@@ -39,9 +39,10 @@ if ($connection->connect_errno) {
     } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
     }
+    */
     $sql = "SELECT * FROM  Movie ";
     $result = mysqli_query($connection, $sql); // First parameter is just return of "mysqli_connect()" function
-    echo "<br>";
+    echo "<html><head></head><body><br>";
     echo "<table border='1'>";
     while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
         echo "<tr>";
