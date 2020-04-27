@@ -39,7 +39,7 @@ if ($connection->connect_errno) {
     } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
     }
-    */
+    
     $sql = "SELECT * FROM  Movie ";
     $result = mysqli_query($connection, $sql); // First parameter is just return of "mysqli_connect()" function
     
