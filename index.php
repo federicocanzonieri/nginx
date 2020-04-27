@@ -44,6 +44,9 @@ if ($connection->connect_errno) {
 }
 $connection->close();
 
+//mysql -u root -p
+//my_password
+//alter user 'username'@'localhost' identified with mysql_native_password by 'password'
 
 echo "ciao carissimo";?>
 <html> 
