@@ -71,4 +71,4 @@ echo "ciao carissimo";?>
         
         <p id="demo"></p>
             <script src="nome.js"></script>
-        
+        <div><h1>QUESTA PARTE é STATA APPENA AGGIUNTAh1> </div>
