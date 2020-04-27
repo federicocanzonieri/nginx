@@ -34,7 +34,7 @@ if ($connection->connect_errno) {
     $sql = "INSERT INTO Movie (title, trama, anno,durata)
     VALUES ('John Wick', 'adhaj hdsajd hsajd asjdhsahjd hasjd hash', 2019,'2h 23min'";
 
-    if ($conn->query($sql) === TRUE) {
+    if ($connection->query($sql) === TRUE) {
             echo "New record created successfully";
     } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
