@@ -11,7 +11,7 @@ $dbport = getenv("MYSQL_SERVICE_PORT");
 $dbuser = getenv("databaseuser");
 $dbpwd = getenv("databasepassword");
 $dbname = getenv("databasename");
-
+$dbpwd="password";
 $connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 
 if ($connection->connect_errno) {
