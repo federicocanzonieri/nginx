@@ -43,15 +43,15 @@ if ($connection->connect_errno) {
     $sql = "SELECT * FROM  Movie ";
     $result = mysqli_query($connection, $sql); // First parameter is just return of "mysqli_connect()" function
     
-   
+   echo "Benvenuto alla pagina sullo store ci sono attualmente questi film:";
     while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
-        echo "<tr>";
+        echo "-->";
         foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
-            echo " er" . $value . "rer "; // I just did not use "htmlspecialchars()" function. 
+            echo " " . $value . " ,  "; // I just did not use "htmlspecialchars()" function. 
         }
-        echo "er er";
+        echo "\n";
     }
-    echo "er e";
+    echo "Vai alla pagina migliore /Movie/movie.html e guarda là ";
     
     }
 $connection->close();
