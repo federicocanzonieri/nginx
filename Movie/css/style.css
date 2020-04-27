@@ -1,0 +1,488 @@
+/*fonts prima cosa */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&display=swap');
+
+body{
+    font-family: 'Montserrat',sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+.mt-30 {
+    margin-top: 30px !important;
+}
+.mt-62 {
+    margin-top: 62px !important;
+}
+.ml-30{
+    margin-left: 22px !important;
+}
+.mb-30 {
+    margin-bottom: 30px !important;
+}
+
+.my-30 {
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+}
+
+
+nav {
+    background-color: rgba(0,0,0,.05);
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 999; /*si deve vedere sempre */
+ }
+
+ .brand { 
+     padding: 16px 0px;
+     display: inline-block;
+     
+ }
+ nav >ul { 
+    float: right;
+    
+}
+ nav > ul > li { 
+    
+    display: inline-block;
+    padding: 5px 15px  ;
+    position: relative;
+}
+nav > ul > li > a { 
+    
+    color: #fff;
+    text-decoration: none;
+    font-size: .9em;
+    font-weight: 600;
+    
+}
+nav >ul >li::after{ 
+    content: '';
+    width: 0px;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 15px;
+    bottom: -3px;
+    transition: width .3s ease-in-out;
+    
+} 
+
+nav > ul > li:hover::after { 
+    
+    width: 40%;
+   
+}
+
+nav > ul > li > a.active::after { 
+
+    content: '';
+    width: 40%;
+    height: 3px;
+    background-color:   #fff;
+    position: absolute;
+    left: 15px;
+    bottom: -3px;
+
+}
+
+.hero{ 
+    
+
+   position: relative;
+   overflow: hidden;
+   background-color: #000;
+   z-index: 1;
+   padding: 160px 0 100px 0;
+
+}
+.hero .cta > h1{ 
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    color:yellow;
+    font-size: 4.3em;
+    font-weight: 800;
+    padding-bottom: 30px;
+}    
+.hero .cta > h1::after{ 
+    content: '';
+    width: 20%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}  
+.hero .cta{ 
+    position: relative;
+    z-index: 3;
+
+} 
+.hero::after{ 
+
+    content: '';
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    opacity: 0;
+    position: absolute;
+    transition: .3s ease-in-out;
+
+}
+
+
+
+
+.hero img {
+    height: 500px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.white-txt {
+    color: #fff !important;
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    border: none;
+    font-size: 1.2em;
+    padding: 20px 35px;
+    border-radius: 6px;
+}
+
+.btn-hero {
+    margin-right: 15px;
+    margin-top: 40px;
+    font-weight: 600;
+    background-color: rgba(115, 115, 115, .3);
+    color: #fff;
+    transition: color .3s ease-in-out, background-color .3s ease-in-out;
+}
+
+
+.white-icon {
+    fill: #fff;
+    transition: fill .3s ease-in-out;
+}
+
+.btn-hero:hover {
+    background-color: #FFD500;
+    color: #000;
+}
+
+
+.btn-hero:hover .white-icon {
+    fill: #000;
+}
+
+.btn-hero>svg {
+    margin-right: 5px;
+}
+
+.moview-table{
+    display: inline-block;
+    position: relative;
+}
+.row-title{
+    margin-top: 40px;
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.card{
+     
+    
+    overflow: hidden;
+}
+.card > img{
+    width: 250px;
+    height: 380px;
+    
+} 
+.card > .movie-summary{
+    position: absolute;
+   
+    bottom: -270px;
+    display: inline-block;
+    
+    width: 250px;
+    margin: 0 ;
+    padding: 0 ;
+    background-color: rgba(0, 0, 0, 0.8);
+    word-wrap: break-word;
+    border-radius: 0px 0px 14px 14px;
+ } 
+ .movie-play{
+    
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.card:hover>.movie-summary{
+     bottom: 0px;
+     transition:  .3s ease-in-out;
+     height: 260px;
+     margin-bottom: 3px;
+} 
+
+.title-data{
+    padding-left: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    word-spacing: 10px;
+}
+.title-summary{
+    
+    padding-top: 3px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.title-testo{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 3px;
+    padding-bottom: 15px;
+    font-weight: 500;
+    font-size: 14px;
+    
+    
+   
+   
+}
+.title-tags{
+    font-size: 10px;
+   
+}
+.title-tag{
+    width: 60px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-left: 10px;
+    font-size: 14px;
+    
+    border-radius: 14px ;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.bottom-brand{
+    position: relative;
+    margin-top: 80px;
+    padding-top: 40px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    font-size: 22px;
+    font-weight: 800;
+    padding-bottom: 40px;
+    padding-left: 180px;
+    background-color: #000;
+    height: 80px;
+}
+.container {
+   
+}
+
+
+
+
+/* hero detail */
+
+
+.grey-bg{
+    background-color: rgba(77, 72, 72, 0.685);
+}
+
+.cta-hero{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 150px;
+    z-index: 1;
+}
+.cta-hero>h1{
+    font-weight: 800;
+    color: rebeccapurple;
+    font-size: 4.3em;
+    
+}
+.cta-hero>h1>span{
+    font-size: 0.7em;
+}
+.cta-hero>h1::after{
+    content: '';
+    margin-bottom: 120px;
+    width: 60%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.cta-hero>button:hover{
+    background-color: rebeccapurple ;
+   
+}
+
+.btn-hero:hover .white-icon {
+    fill: #fff;
+
+}
+.img-hero{
+    padding: 0;
+    top:-1px;
+   
+    height: 900px;
+}
+
+.info{
+    position: relative;
+    background-color:rgba(0,0,0,0.8);
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: -1px;
+    padding-bottom: 30px;
+    padding-top: 25px;
+}
+
+.info-movie > div{
+    margin-top: 15px;
+    margin-bottom:15px ;
+}
+.size-text-s{
+    font-weight: 500;
+    font-size: 10px;
+}
+
+.trama{
+   
+    font-weight: 500;
+    font-size: 12px;
+}
+
+
+.cast-item{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    margin-right: 20px;
+    
+}
+.lista{
+    padding: 0;
+    margin: 0;
+    
+}
+.nome{
+    font-size: 10px;
+    font-weight: 600;
+}
+.signed{
+    text-decoration: underline;
+}
+
+.bottom{
+    height: 100px;
+    background-color: #000;
+    
+}
+.bottom> img{
+    padding-top: 40px;
+    
+    padding-left: 40px;
+  
+}
+.tipologia-info>.title-tags{
+    margin-top: 10px;
+}
+
+.zero{
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 767px) {
+    .hero::after {
+        opacity: 1;
+    }
+    .card{
+       
+       
+       
+       margin: 0 auto;
+       width: 55%;
+       text-align: center;
+    }
+   
+
+}
+
+@media  (max-width: 900px) and (min-width: 768px) {
+    .hero::after {
+        opacity: 1;
+    }
+    .card{
+       
+       
+      
+       margin: 0 auto;
+       width: 45%;
+       margin: 0 auto !important;
+       display: inline-block;
+    }
+    .container{
+        width: 85%;
+        position: relative;
+        left: 10px;
+        text-align: center;
+        margin: 0 auto !important;
+       
+    }
+
+}
+@media   (min-width: 901px) and (max-width: 1200px) {
+    .hero::after {
+        opacity: 1;
+    }
+    .card{
+       
+       
+      
+       margin: 0 auto;
+       width: 45%;
+       margin: 0 auto !important;
+       display: inline-block;
+       
+    }
+    .container{
+        width: 95%;
+        position: relative;
+        
+        text-align: center;
+        margin: 0 auto !important;
+        
+    }
+
+}
+
