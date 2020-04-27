@@ -18,7 +18,7 @@ if ($connection->connect_errno) {
     exit();
 } else {
     printf("Connected to the database");
-    /*$sql = "CREATE TABLE Movie (
+    $sql = "CREATE TABLE Movie (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(30) NOT NULL,
     trama VARCHAR(255) NOT NULL,
@@ -26,13 +26,13 @@ if ($connection->connect_errno) {
     durata VARCHAR(10)
     )";
     if ($connection->query($sql) === TRUE) {
-        echo "Table MyGuests created successfully";
+        echo "Table MOVIE created successfully";
     } 
     else {
         echo "Error creating table: " . $conn->error;
     }
-    $sql = "INSERT INTO Movie (title, trama, anno,durata)
-    VALUES ('John Wick', 'adhaj hdsajd hsajd asjdhsahjd hasjd hash', 2019,'2h 23min'";
+    $sql = "INSERT INTO Movie (id,title, trama, anno,durata)
+    VALUES (1,'John Wick', 'adhaj hdsajd hsajd asjdhsahjd hasjd hash', 2019,'2h 23min'";
 
     if ($connection->query($sql) === TRUE) {
             echo "New record created successfully";
