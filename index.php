@@ -32,7 +32,7 @@ if ($connection->connect_errno) {
         echo "Error creating table: " . $conn->error;
     }
     $sql = "INSERT INTO Movie (id,title, trama, anno,durata)
-    VALUES (1,'John Wick', 'adhaj hdsajd hsajd asjdhsahjd hasjd hash', 2019,'2h 23min'";
+    VALUES (1,'John Wick', 'adhaj hdsajd hsajd asjdhsahjd hasjd hash', 2019,'2h 23min')";
 
     if ($connection->query($sql) === TRUE) {
             echo "New record created successfully";
