@@ -42,16 +42,16 @@ if ($connection->connect_errno) {
     */
     $sql = "SELECT * FROM  Movie ";
     $result = mysqli_query($connection, $sql); // First parameter is just return of "mysqli_connect()" function
-    echo "<html><head></head><body><br>";
-    echo "<table border='1'>";
+    
+   
     while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
         echo "<tr>";
         foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
-            echo "<td>" . $value . "</td>"; // I just did not use "htmlspecialchars()" function. 
+            echo " er" . $value . "rer "; // I just did not use "htmlspecialchars()" function. 
         }
-        echo "</tr>";
+        echo "er er";
     }
-    echo "</table>";
+    echo "er e";
     
     }
 $connection->close();
