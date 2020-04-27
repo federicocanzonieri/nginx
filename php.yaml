@@ -1,0 +1,59 @@
+kind: BuildConfig
+apiVersion: build.openshift.io/v1
+metadata:
+  name: nginx-git
+  namespace: default
+  selfLink: /apis/build.openshift.io/v1/namespaces/default/buildconfigs/nginx-git
+  uid: 47904fe1-8817-11ea-b937-0a580a8000fd
+  resourceVersion: '229106'
+  creationTimestamp: '2020-04-26T23:40:15Z'
+  labels:
+    app: nginx-git
+    app.kubernetes.io/component: nginx-git
+    app.kubernetes.io/instance: nginx-git
+    app.kubernetes.io/name: php
+    app.kubernetes.io/part-of: nginx-git-app
+    app.openshift.io/runtime: php
+    app.openshift.io/runtime-version: '7.2'
+  annotations:
+    app.openshift.io/vcs-ref: master
+    app.openshift.io/vcs-uri: 'https://github.com/federicocanzonieri/nginx.git'
+spec:
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'nginx-git:latest'
+  resources: {}
+  successfulBuildsHistoryLimit: 5
+  failedBuildsHistoryLimit: 5
+  strategy:
+    type: Source
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        namespace: openshift
+        name: 'php:7.2'
+  postCommit: {}
+  source:
+    type: Git
+    git:
+      uri: 'https://github.com/federicocanzonieri/nginx.git'
+    contextDir: /
+  triggers:
+    - type: Generic
+      generic:
+        secretReference:
+          name: nginx-git-generic-webhook-secret
+    - type: GitHub
+      github:
+        secretReference:
+          name: nginx-git-github-webhook-secret
+    - type: ImageChange
+      imageChange:
+        lastTriggeredImageID: >-
+          image-registry.openshift-image-registry.svc:5000/openshift/php@sha256:763651a0418598074ecb76ba0d2f03affc1bf2680d2a05e2aef185b51c3471dd
+    - type: ConfigChange
+  runPolicy: Serial
+status:
+  lastVersion: 4
