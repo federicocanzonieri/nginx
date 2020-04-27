@@ -1,10 +1,10 @@
 <?php
 
 
-echo getenv("MYSQL_SERVICE_HOST");
-echo getenv("databaseuser");
-echo getenv("databasepassword");
-echo getenv("databasename");
+echo "host".getenv("MYSQL_SERVICE_HOST");
+echo "user".getenv("databaseuser");
+echo "pass".getenv("databasepassword");
+echo "name".getenv("databasename");
 
 $dbhost = getenv("MYSQL_SERVICE_HOST");
 $dbport = getenv("MYSQL_SERVICE_PORT");
