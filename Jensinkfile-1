@@ -1,0 +1,95 @@
+node {
+   
+   stage('Preparation') { // for display purposes
+      // Get some code from a GitHub repository
+     
+      parallel (primoRamo: {
+            
+            sh 'echo "PHP FETCH"'
+           
+            sh 'rm -rf nginx'
+            sh 'ls'
+             dir('nginx'){
+                
+                git 'https://github.com/federicocanzonieri/Java_openshift_example'
+       
+            }
+            
+           // 
+       },
+       secondoRamo: {
+        
+            sh 'echo "JAVA FETCH "'
+           //
+            dir('java'){
+                
+                git 'https://github.com/federicocanzonieri/Java_openshift_example'
+       
+            }
+       },
+       terzoRamo:{
+            sh 'echo "NODE FETCH"'
+             dir('node'){
+                
+                git 'https://github.com/federicocanzonieri/prova_maven.git'            
+            }
+           
+        })
+  
+     
+   }
+   stage('Build') {
+     parallel (primoRamo: {
+        
+            sh 'echo "PHP NO BUILD"'
+            
+           
+       },
+       secondoRamo: {
+        
+            sh 'echo "JAVA BUILD "'
+            // tipo mvn compile packege test run install
+       
+       },
+       terzoRamo:{
+            sh 'echo "JAVA BUILD"'
+           // TIPO npm test node test e cosi via  
+        })
+  
+     
+     
+   }
+   stage('Test'){
+      
+       parallel (firstBranch: {
+        
+            sh 'echo "PHP testing"'
+            sh 'echo "Test PASSED"'
+
+       },
+    secondBranch: {
+        
+            sh 'echo "JAVA testing"'
+            sh 'echo "Test PASSED"'
+       
+      },
+      terzoRamo:{
+            sh 'echo "NODE testing"'
+            sh 'echo "Test PASSED"'
+       
+      })
+        
+   }
+   stage('Results') {
+      
+      archiveArtifacts '*'
+  
+   }
+   stage('Deploy'){
+       input 'Deploy to Production'
+       sh 'echo "DEPLOY "'
+   
+   }
+   
+   
+}
