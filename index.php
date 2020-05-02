@@ -1,16 +1,16 @@
 <?php
 
 
-/*echo "host".getenv("MYSQL_SERVICE_HOST");
-echo "user".getenv("databaseuser");
-echo "pass".getenv("databasepassword");
+echo "host".getenv("MARIADB_34_SERVICE_HOST");
+echo "user".getenv("root");
+echo "pass".getenv("root");
 echo "name".getenv("databasename");
-*/
-$dbhost = getenv("MYSQL_SERVICE_HOST");
+
+$dbhost = getenv("MARIADB_34_SERVICE_HOST");
 $dbport = getenv("MYSQL_SERVICE_PORT");
-$dbuser = getenv("databaseuser");
-$dbpwd = getenv("databasepassword");
-$dbname = getenv("databasename");
+$dbuser = getenv("root");
+$dbpwd = getenv("root");
+$dbname = getenv("mysql");
 $connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 
 if ($connection->connect_errno) {
