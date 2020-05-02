@@ -14,7 +14,7 @@ $dbname = getenv("databasename");
 $connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 
 if ($connection->connect_errno) {
-    printf("Connect failed: %s\n", $mysqli->connect_error);
+    printf("  Connect failed: %s\n", $mysqli->connect_error);
     exit();
 } 
 else {
@@ -30,7 +30,7 @@ else {
         echo "Table MOVIE created successfully";
     } 
     else {
-        echo "Error creating table: " . $conn->error . "<br>";
+        echo "   Error creating table: " . $conn->error . "<br>";
     }
     $sql = "INSERT INTO Movie (id,title, trama, anno,durata)
     VALUES (1,'John Wick', 'John Wick sta per scatenare l'inferno in terra ...', 2019,'2h 23min'),
@@ -69,13 +69,14 @@ $connection->close();
     </head>
     <body>
         <p> INFO SULLE VARIABILI D'AMBIENTE</p>
-        <button onclick="myFunction()">Click me</button>
+       
         <div><h1>ENV</h1> </div>
         <div><h1>Host: <?php echo $dbhost; ?></h1></div>
         <div><h1>Port: <?php echo $dbport; ?></h1></div>
         <div><h1>User: <?php echo $dbuser; ?></h1></div>
         <div><h1>Password: <?php echo $dbpwd; ?></h1></div>
         <div><h1>DB NAME:<?php echo $dbname;?></h1></div>
+        <button onclick="myFunction()">Click me</button>
         
         <p id="demo"></p>
         <script src="nome.js"></script>
