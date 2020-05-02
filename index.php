@@ -60,7 +60,7 @@ $connection->close();
 //my_password
 //alter user 'username'@'localhost' identified with mysql_native_password by 'password'
 
-echo "ciao carissimo";?>
+?>
 <html> 
     <head>
         
@@ -68,7 +68,14 @@ echo "ciao carissimo";?>
     <body>
         <p> OK é CAMBIATO QUALCOSA </p>
         <button onclick="myFunction()">Click me</button>
+        <div><h1>QUESTA PARTE é STATA APPENA AGGIUNTA</h1> </div>
+        <div><h1><?php echo $dbhost; ?></h1></div>
+        <div><h1><?php echo $dbport; ?></h1></div>
+        <div><h1><?php echo $dbuser; ?></h1></div>
+        <div><h1><?php echo $dbpwd; ?></h1></div>
+        <div><h1><?php echo $dbname;?></h1></div>
         
         <p id="demo"></p>
-            <script src="nome.js"></script>
-        <div><h1>QUESTA PARTE é STATA APPENA AGGIUNTAh1> </div>
+        <script src="nome.js"></script>
+          </body>
+ </html>
