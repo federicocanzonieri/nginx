@@ -30,7 +30,7 @@ else {
         echo "Table MOVIE created successfully";
     } 
     else {
-        echo "Error creating table: " . $conn->error;
+        echo "Error creating table: " . $conn->error . "<br>";
     }
     $sql = "INSERT INTO Movie (id,title, trama, anno,durata)
     VALUES (1,'John Wick', 'John Wick sta per scatenare l'inferno in terra ...', 2019,'2h 23min'),
