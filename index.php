@@ -49,7 +49,7 @@ else {
     while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
         echo "-->";
         foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
-            echo " " . $value . " , <br> "; // I just did not use "htmlspecialchars()" function. 
+            echo " " . $value . " , "; // I just did not use "htmlspecialchars()" function. 
         }
         echo "\n";
     }
@@ -68,9 +68,9 @@ $connection->close();
         
     </head>
     <body>
-        <p> OK é CAMBIATO QUALCOSA </p>
+        <p> INFO SULLE VARIABILI D'AMBIENTE</p>
         <button onclick="myFunction()">Click me</button>
-        <div><h1>QUESTA PARTE é STATA APPENA AGGIUNTA</h1> </div>
+        <div><h1>ENV</h1> </div>
         <div><h1>Host: <?php echo $dbhost; ?></h1></div>
         <div><h1>Port: <?php echo $dbport; ?></h1></div>
         <div><h1>User: <?php echo $dbuser; ?></h1></div>
