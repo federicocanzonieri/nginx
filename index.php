@@ -33,7 +33,8 @@ else {
         echo "Error creating table: " . $conn->error;
     }
     $sql = "INSERT INTO Movie (id,title, trama, anno,durata)
-    VALUES (1,'John Wick', 'adhaj hdsajd hsajd asjdhsahjd hasjd hash', 2019,'2h 23min')";
+    VALUES (1,'John Wick', 'John Wick sta per scatenare l'inferno in terra ...', 2019,'2h 23min'),
+      (2,'Avengers End game', 'Viaggi nel tempo è l'unica cosa che ci mancava', 2019,'3h 23min') ";
 
     if ($connection->query($sql) === TRUE) {
             echo "<br>New record created successfully<br>";
