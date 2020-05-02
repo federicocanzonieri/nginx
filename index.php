@@ -1,11 +1,11 @@
 <?php
 
 
-echo "host".getenv("MYSQL_SERVICE_HOST");
+/*echo "host".getenv("MYSQL_SERVICE_HOST");
 echo "user".getenv("databaseuser");
 echo "pass".getenv("databasepassword");
 echo "name".getenv("databasename");
-
+*/
 $dbhost = getenv("MYSQL_SERVICE_HOST");
 $dbport = getenv("MYSQL_SERVICE_PORT");
 $dbuser = getenv("databaseuser");
@@ -16,7 +16,8 @@ $connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 if ($connection->connect_errno) {
     printf("Connect failed: %s\n", $mysqli->connect_error);
     exit();
-} else {
+} 
+else {
     printf("Connected to the database");
     $sql = "CREATE TABLE Movie (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -35,7 +36,7 @@ if ($connection->connect_errno) {
     VALUES (1,'John Wick', 'adhaj hdsajd hsajd asjdhsahjd hasjd hash', 2019,'2h 23min')";
 
     if ($connection->query($sql) === TRUE) {
-            echo "New record created successfully";
+            echo "<br>New record created successfully<br>";
     } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
     }
@@ -43,7 +44,7 @@ if ($connection->connect_errno) {
     $sql = "SELECT * FROM  Movie ";
     $result = mysqli_query($connection, $sql); // First parameter is just return of "mysqli_connect()" function
     
-   echo "Benvenuto alla pagina sullo store ci sono attualmente questi film:";
+   echo "<div>Benvenuto alla pagina sullo store ci sono attualmente questi film:</div>";
     while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
         echo "-->";
         foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
@@ -51,7 +52,7 @@ if ($connection->connect_errno) {
         }
         echo "\n";
     }
-    echo "Vai alla pagina migliore /Movie/movie.html e guarda là ";
+    echo "<br>Vai alla pagina migliore /Movie/movie.html e guarda là<br> ";
     
     }
 $connection->close();
@@ -69,11 +70,11 @@ $connection->close();
         <p> OK é CAMBIATO QUALCOSA </p>
         <button onclick="myFunction()">Click me</button>
         <div><h1>QUESTA PARTE é STATA APPENA AGGIUNTA</h1> </div>
-        <div><h1><?php echo $dbhost; ?></h1></div>
-        <div><h1><?php echo $dbport; ?></h1></div>
-        <div><h1><?php echo $dbuser; ?></h1></div>
-        <div><h1><?php echo $dbpwd; ?></h1></div>
-        <div><h1><?php echo $dbname;?></h1></div>
+        <div><h1>Host: <?php echo $dbhost; ?></h1></div>
+        <div><h1>Port: <?php echo $dbport; ?></h1></div>
+        <div><h1>User <?php echo $dbuser; ?></h1></div>
+        <div><h1>Password <?php echo $dbpwd; ?></h1></div>
+        <div><h1>DB NAME<?php echo $dbname;?></h1></div>
         
         <p id="demo"></p>
         <script src="nome.js"></script>
