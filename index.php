@@ -37,9 +37,9 @@ else {
       (2,'Avengers End game', 'Viaggi nel tempo è l'unica cosa che ci mancava', 2019,'3h 23min') ";
 
     if ($connection->query($sql) === TRUE) {
-            echo "<br>New record created successfully<br>";
+            echo "<br>New record(s) created successfully<br>";
     } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $sql . "<br>" . $conn->error . "<br>";
     }
     
     $sql = "SELECT * FROM  Movie ";
@@ -49,7 +49,7 @@ else {
     while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
         echo "-->";
         foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
-            echo " " . $value . " ,  "; // I just did not use "htmlspecialchars()" function. 
+            echo " " . $value . " , <br> "; // I just did not use "htmlspecialchars()" function. 
         }
         echo "\n";
     }
@@ -73,9 +73,9 @@ $connection->close();
         <div><h1>QUESTA PARTE é STATA APPENA AGGIUNTA</h1> </div>
         <div><h1>Host: <?php echo $dbhost; ?></h1></div>
         <div><h1>Port: <?php echo $dbport; ?></h1></div>
-        <div><h1>User <?php echo $dbuser; ?></h1></div>
-        <div><h1>Password <?php echo $dbpwd; ?></h1></div>
-        <div><h1>DB NAME<?php echo $dbname;?></h1></div>
+        <div><h1>User: <?php echo $dbuser; ?></h1></div>
+        <div><h1>Password: <?php echo $dbpwd; ?></h1></div>
+        <div><h1>DB NAME:<?php echo $dbname;?></h1></div>
         
         <p id="demo"></p>
         <script src="nome.js"></script>
