@@ -8,9 +8,9 @@ echo "name".getenv("databasename");
 
 $dbhost = getenv("MARIADB_34_SERVICE_HOST");
 $dbport = getenv("MYSQL_SERVICE_PORT");
-$dbuser = getenv("root");
-$dbpwd = getenv("root");
-$dbname = getenv("mysql");
+$dbuser = "root" //getenv("databaseuser");
+$dbpwd = "root"//getenv("databaseuserpassword");
+$dbname = "mysql"//getenv("databasename");
 $connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 
 if ($connection->connect_errno) {
