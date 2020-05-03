@@ -35,7 +35,7 @@ else {
     $sql = "INSERT INTO Movie (id,title, trama, anno,durata)
     VALUES (1,'John Wick', 'John Wick sta per scatenare l inferno in terra ...', 2019,'2h 23min'),
     (2,'Avengers End game', 'Viaggi nel tempo è l unica cosa che ci mancava', 2019,'3h 23min'),
-    (3,'MATRIX REVOLUTION', 'L'eletto è lui tempo è l unica cosa che ci mancava', 2000,'2h 00min')";
+    (3,'MATRIX REVOLUTION', 'L eletto è lui tempo è l unica cosa che ci mancava', 2000,'2h 00min')";
 
     if ($connection->query($sql) === TRUE) {
             echo "<br>New record(s) created successfully<br>";
