@@ -1,1 +1,1 @@
-alert("fregato");
+alert();
