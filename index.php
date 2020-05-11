@@ -1,10 +1,10 @@
 <?php
 
 
-echo "host".getenv("MARIADB_34_SERVICE_HOST");
-echo "user".getenv("root");
-echo "pass".getenv("root");
-echo "name".getenv("databasename");
+echo "host".getenv("MYSQL_SERVICE_HOST");
+echo "user".getenv("MYSQL_SERVICE_PORT");
+echo "pass".getenv("databaseuser");
+echo "name".getenv("databasepassword");
 
 $dbhost =getenv("MYSQL_SERVICE_HOST");  //getenv("MARIADB_34_SERVICE_HOST");
 $dbport = getenv("MYSQL_SERVICE_PORT");
