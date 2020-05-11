@@ -9,7 +9,7 @@ echo "name".getenv("databasename");
 $dbhost =getenv("MYSQL_SERVICE_HOST");  //getenv("MARIADB_34_SERVICE_HOST");
 $dbport = getenv("MYSQL_SERVICE_PORT");
 $dbuser = getenv("databaseuser");
-$dbpwd = getenv("databaseuserpassword");
+$dbpwd = getenv("databasepassword");
 $dbname = getenv("databasename");
 $connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 
