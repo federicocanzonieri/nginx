@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"/>
+    <link rel="stylesheet"  href="Assets/css/style.css"/>
+    
+    
+</head>
+<body class="red" id="body">
+    <!--<div class="modal">
+        <div class="modal-box">
+            <div class="icone-tags no-border-radius ">
+                <div class="icona red" ></div><div class="icona  yellow" ></div><div class="icona green mr-15" ></div>
+            </div>
+            <div class="row">
+                <div class="img-box absolute"><img src="build-deploy.jpg" class="img-pkmn"></div>
+                <div class="info"></div>
+                <div class="summary"> sdisa jdiasj iasj diasjd iajsdidai sj asd asd asd asdasjdaisdj oasdh lheofahkljasoi jogiejadsj djad</div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="main-title" id="prova">MyTerminal </div>
+         <div class="quadrato full-screen"  id="text">     
+    </div>
+    --> 
+    <!--
+    <div class="terminal" id="terminal-0">
+        <div class="arrow white-txt">🔜</div>
+        <div class="icone-tags min ">
+            <div class="icona red" id="close"></div><div class="icona  yellow" id="resize"></div><div class="icona green mr-15" id="open"></div>
+        </div>
+        <div class="bash bash-0 grey min">  
+            <div class="command-line-interface cli-0">
+                <span class="hostname">federico@federico-X540LJ</span><span class="path">:/</span>
+                <input type="text" class="cmd" id="cmd-0" name="0"  >
+                    
+                    <div class="response">
+                     <div class="row">
+                        <div class="box">
+                            <img src="build-deploy.jpg" class="img-pkmn">
+                            <div class="name">
+                                venusar
+                            </div>
+                        </div>
+                    
+            </div>
+        </div>
+    </div>
+    -->
+   
+
+    <div class="application addTerminal">
+        <img class="icon " src="Assets/images/term-icon.png">
+        <div class="title-icon white-txt">Terminal</div>
+    </div>
+
+    <div class="application addUploadFile">
+        <img class="icon " src="Assets/images/upload.png">
+        <div class="title-icon white-txt">Upload</div>
+    </div>
+    <!--
+    <div class="upload-file-form border">
+        <div class="title center"><h1>Form to upload</h1></div>
+        <div class="contenitore-file-manager">
+            <table class="file-manager" onclick="ls_php()">
+                
+                <tr>
+                    <th class="red" >Nome</th>
+                    <th>Dimensione</th>
+                    <th>Timestamp</th>
+                    <th>Elimina</th>
+            
+                </tr>
+                <tr>
+                    <td>Nome</td>
+                    <td>Dimensione</td>
+                    <td>Timestamp</td>
+                    <td>Elimina</td>
+            
+                </tr>
+                
+            </table>
+            
+        </div>
+        <form  method="POST"  id="myform"   onsubmit="myFunc(event)"     enctype="multipart/form-data">
+            <div class="input-group border"><br>
+                <span class="text-email">Email proprietario:</span>
+                <input type="textbox " placeholder="example.at.yahoo.com" name="email" class="input-upl email"><br><br><br>
+                <span > Sceglie il file:</span>
+                <input type="file" name="nome_file" id="file" class="ml-60">
+                <input type="submit"  class="submit-file">
+            </div>
+        </form>
+
+        <div class="upload-bar border center">
+            <div class="bar border" id="bar-up"></div>
+            <div class="text-bar"></div>
+        </div>
+    </div>
+    -->
+    
+    
+
+    <script src="Assets/js/jquery-3.5.0.min.js"></script> 
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> <!-- JQUERY UI-->
+    <script src="Assets/js/filesystem.js"></script>
+    <script src="Assets/js/shell.js"></script>
+    <script src="Assets/js/modal.js"></script>
+    <script src="Assets/js/upload.js"></script>
+    <script>
+        /*
+        var ls_php =() => $.get("php_ls.php",(response)=>{
+                        console.log("ok php_ls",response);
+                        json_response=JSON.parse(response);
+                        let html_table="<tr class='file-manager-bar'><th >Nome</th><th>Dimensione</th><th>Timestamp</th><th>Elimina</th></tr>";
+                        for(val of json_response){
+                            if(val=="." || val=="..")continue;
+                            html_table+="<tr><td>"+ val+ "</td><td></td><td></td><td><div class='delete-item'>+</div></td></tr>";
+                        }
+                        $(".file-manager").html(html_table);
+                        $(".delete-item").click((event)=>{
+                            console.log(event);
+                            event.target.parentElement.parentElement.remove();
+                            console.log(this);
+                        });
+             });
+        
+        
+
+
+        $(".application").draggable(); //app desktop draggable
+        
+        
+        function myFunc(e){
+
+                e.preventDefault();
+                let new_form=new FormData(document.getElementById("myform"));
+                new_form.append("nome_file",$('#file')[0].files[0]);
+                console.log(new_form.get("nome_file"));
+                $.ajax({ 
+                    url:'file-upload.php',
+                    method: "POST",
+                    data: new_form, 
+                    contentType: false,
+                    processData: false,
+                    xhr: function() {
+                            var xhr = new window.XMLHttpRequest();
+                            xhr.upload.addEventListener("progress", function(evt){
+                                if (evt.lengthComputable) {
+                                    var percentComplete = evt.loaded / evt.total;
+                                    $("#bar-up").css("width",percentComplete*100+"%");
+                                    $(".text-bar").text(parseInt(percentComplete*100)+"%");
+                                    //console.log(percentComplete*100);
+                                }
+                            }, false);
+                            return xhr;
+                    },
+                    success: function(data) {
+                            console.log("SUCCESS",data);
+                            ls_php();
+                        },
+                    error: function(data) {
+                            console.log("ERROR",data);
+                        }
+                    });
+
+        }
+
+
+        $(".addUploadFile").on("dblclick",(response)=>{
+            let new_cmd_index=0
+            let html= "<div class='upload-file-form border'>\
+                <div class='icone-tags icone-tags-"+new_cmd_index +" min'>\
+            <div class='icona red' id='close-"+ new_cmd_index +"'></div><div class='icona  yellow' id='resize-"+new_cmd_index +"'></div><div class='icona green ' id='open-"+new_cmd_index+"'></div><div class='icona purple mr-15' id='arrow-down-"+new_cmd_index+"'></div></div>\
+                        <div class='title center'><h1>Form to upload</h1></div>\
+                        <div class='contenitore-file-manager'>\
+                        <table class='file-manager'>\
+                            <tr>\
+                                <th class='red' >Nome</th>\
+                                <th>Dimensione</th>\
+                                <th>Timestamp</th>\
+                                <th>Elimina</th>\
+                            </tr>\
+                            <tr>\
+                                <td>Nome</td>\
+                                <td>Dimensione</td>\
+                                <td>Timestamp</td>\
+                                <td>Elimina</td>\
+                            </tr>\
+                        </table>\
+                         </div>\
+                        <form   method='POST'  id='myform' onsubmit='myFunc(event)' enctype='multipart/form-data'>\
+                            <div class='input-group border' ><br>\
+                                <span class='text-email'>Email proprietario:</span>\
+                                <input type='textbox' placeholder='example.at.yahoo.com' name='email' class='input-upl email'><br><br><br>\
+                                <span > Sceglie il file:</span>\
+                                <input type='file' name='nome_file' id='file' class='ml-60'>\
+                                <input type='submit'  class='submit-file'>\
+                            </div>\
+                        </form>\
+                        <div class='upload-bar border center'>\
+                            <div class='bar border' id='bar-up'></div>\
+                            <div class='text-bar'></div>\
+                        </div>\
+                    </div>";
+            $("body").append(html);
+            //FILE MANAGER
+            $(".upload-file-form").draggable(); //app desktop draggable
+            
+        
+            ls_php();
+            //END FILE MANAGER
+
+        });
+
+        */
+
+    </script>
+
+    <script>
+
+        //APP TERMINALE
+        /*
+        var cmd_index=0;
+        $(".addTerminal").on("dblclick",(response)=>{
+            let new_cmd_index=cmd_index;
+            console.log("okkk");
+            let termi=$("<div id='terminal-"+ new_cmd_index+ "'></div>").addClass("terminal");
+            let corpus=$("<div class='arrow white-txt'>🔜</div><div class='icone-tags icone-tags-"+new_cmd_index +" min'>\
+            <div class='icona red' id='close-"+ new_cmd_index +"'></div><div class='icona  yellow' id='resize-"+new_cmd_index +"'></div><div class='icona green ' id='open-"+new_cmd_index+"'></div><div class='icona purple mr-15' id='arrow-down-"+new_cmd_index+"'></div></div>");
+            let bash=$("<div class='bash bash-"+ new_cmd_index+" grey min'><div class='command-line-interface cli-"+new_cmd_index +"'>\
+                <span class='hostname'>federico@federico-X540LJ</span><span class='path'>:/</span>\
+                <input type='text' class='cmd' id='cmd-"+new_cmd_index +"' name='"+new_cmd_index +"' >\
+            </div></div>");
+            termi.append(corpus);
+            termi.append(bash);
+            
+            $("body").append(termi);
+            $(".terminal").draggable();
+            $( "#terminal-"+new_cmd_index ).resizable();
+            $( "#terminal-"+new_cmd_index ).on("click",(response)=>{
+                $( ".terminal" ).removeClass("focused");
+                $( "#terminal-"+new_cmd_index ).addClass("focused");
+                
+            });
+            addTermi(new_cmd_index);
+            cmd_index++;
+        });
+
+        //APPL UPLOAD*/
+
+
+    </script>
+</body>
+</html>

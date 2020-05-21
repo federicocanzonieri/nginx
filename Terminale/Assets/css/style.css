@@ -1,0 +1,426 @@
+.main-title{
+    position: relative;
+    text-align :center;
+    font-family: monospace;
+    font-size: 2.5em;
+    border: 2px solid black;
+    margin-bottom: 80px;
+ }
+ .main-title::after{
+     content: '$$';
+     color: green;
+}
+.bash{
+    width: 100%;
+    height: 95%;
+    border: 1px solid black ;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 0 0 22px 22px ;
+    overflow: auto;
+    
+    
+}
+
+.icone-tags{
+  
+    text-align: right;
+    background-color: grey;
+    
+    border-radius: 22px 22px 0 0;
+    padding-top: 5px;
+    margin: 0 auto;
+    width: 100%;
+    line-height: 12px;
+    height: 2vh;
+}
+.border{
+    border: 2px solid black;
+    
+}
+.no-border-radius{
+    
+    /*border-radius: 0 !important;*/
+    width: 99% !important;
+}
+.icona{
+    
+    display: inline-block;
+    position: relative;
+    margin: 0 2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.52);
+}
+.command-line-interface{
+    
+    font-size: 1.1em;
+    font-family: monospace;
+    padding: 20px 0;
+    
+    font-weight: bold;
+    
+    
+}
+.hostname{
+
+    color: green;
+    display: inline-block;
+    padding-left: 5px;
+    
+}
+.hostname::after{
+
+    content: ":";
+
+}       
+.path{
+    display: inline-block;
+    color: rgb(41, 22, 218);
+    padding-right: 5px;
+}          
+#cmd,.cmd{
+    text-align: left;
+    width: 50%;
+    height: 2vh;
+    background-color: inherit;
+    padding: 5px;
+    color: white;
+    border: 1px solid rgba(0, 0, 255, 0.712);
+    
+    
+    font-family: monospace;
+    border-radius: 8px;
+}      
+ #cmd:focus{
+    border-radius: 8px;
+    
+}   
+.red{
+    background-color: rgb(175, 5, 5);
+}
+.purple{
+    background-color: rgb(106, 20, 219);
+}
+.grey{
+    background-color: rgb(24, 22, 22);
+}
+.green{
+    background-color: rgb(33, 177, 5);
+}
+.yellow{
+    background-color: rgb(212, 166, 13);
+}
+
+.mr-15{
+    margin-right: 15px !important;
+}
+.response{
+    border: 2px solid black;
+    
+    margin-top: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.close{
+    display: none;
+}
+.resize{
+    width: 100% !important;
+    position: relative;
+    
+    
+    
+}
+.min{/* chiamarlo reduce */
+    min-width:  40% !important;
+
+}
+.quadrato{
+    
+    width: 25%;
+    height: 10vh;
+    left: 50px;
+    margin-bottom: 10px;
+    
+}
+.box{/* chiamarlo reduce */
+   width: 30%;
+   background-position: center;
+   background-size: cover;
+   display: inline-block;
+   border: 3px solid #da450ad3;
+   text-align: center;
+   
+}
+.row{/* chiamarlo reduce */
+   width: 100%;
+   text-align: center;
+}
+.img-pkmn{/* chiamarlo reduce */
+   
+   width: 100%;
+   
+}
+.name{/* chiamarlo reduce */
+    
+    color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-weight: bold;
+    font-family: monospace;
+    border-top: 2px solid #da450ad3;
+}
+.box:hover .img-pkmn{/* chiamarlo reduce */
+   cursor: pointer;
+   background-color: aqua;
+}
+.full-height{/* chiamarlo reduce */
+   height: 100vh;
+}
+.full-screen{/* chiamarlo reduce */
+    position: absolute !important;
+    top: 10px !important;
+    left: 0 !important;
+    display: inline-block;
+    margin: 0 10px !important;
+    width: 99% !important;
+    height: 90vh !important;
+    
+    
+    
+}
+
+.modal{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(44, 42, 42, 0.849);
+  z-index: 999;
+  position: absolute;
+  
+}
+body{
+  height: 100vh;
+  padding: 10px;
+  margin: 0;
+  overflow:hidden;
+  background-image: url("../images/ubuntu.jpg") ;
+  background-position: center;
+  background-size: cover;
+
+}
+.modal-box{
+ 
+  
+  
+  
+  width: 800px;
+  height: 600px;
+
+  margin: 40px auto;
+  
+  
+}
+.disable{
+    background-color: gray;
+}
+.img-box{
+    display: inline-block;
+    background-color: rgba(80, 76, 76, 0.87);
+    width: 49%;
+    height: 71vh;
+    color: black;
+    
+}
+.summary{
+    background-color: rgb(206, 16, 16);
+    width: 49%;
+    height: 35vh;
+    color: black;
+    overflow: auto;
+    font-size: 1em;
+    font-family: monospace;
+    position: relative;
+    right: -2px;
+    display: inline-block;
+}
+.absolute{
+    float: left;
+    margin-left: 5px;
+}
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 20%;
+    left: 30%;
+    
+    animation: spin 2s linear infinite;
+}
+
+    @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.align-left{
+    text-align: left;
+}
+.icone-tags-bottom{
+    background-color: grey;
+    border-radius:  0 0 22px 22px ;
+    padding-top: 5px;
+    margin: 0 auto;
+    width: 90%;
+    height: 5vh;
+    position: relative;
+    top: -3px;
+}
+
+.terminal { 
+    width: 85%;
+    height: 600px;
+}   
+
+.arrow{ 
+    position: absolute;
+    bottom: 3px;
+    right: 5px;
+
+}   
+.white-txt{ 
+    color: white!important;
+    z-index: 1;
+    font-size: 1.5em;
+}   
+
+.focused{
+
+    z-index: 12;
+
+}       
+
+
+
+.icon{
+    
+    width: 50px;
+    height: 50px;
+    background-color: inherit;
+
+}       
+
+.title-icon{
+    
+    font-size: 1.1em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}    
+.center{
+    
+    text-align: center;
+} 
+.input-group{
+    
+    margin: 0 auto;
+    width: 90%;
+}   
+.upload-file-form{
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    position: relative;
+    top: -150px;
+    width: 75%;
+    
+    border-radius: 22px;
+}    
+.input-upl{
+    margin-left: 50px;
+    border: 0;
+    border-bottom: 1px solid black;
+}   
+
+.ml-60{
+    margin-left: 80px !important;
+}   
+
+.submit-file{
+    
+    background-color: #3498db;
+    width: 30%;
+    font-size: 1.5em;
+    border-radius: 22px;
+    border: 0;
+    position: absolute;
+    bottom: 5px;
+    right: 40px;
+   
+    text-align: center;
+}   
+.submit-file:hover{
+    
+    
+    opacity: 0.65;
+    border: 1px solid black;
+}   
+
+
+.upload-bar{
+    margin: 20px auto;
+    width: 50%;
+    height: 3vh;
+    border-radius: 22px;
+    margin-bottom: 100px;
+    overflow: hidden;
+}
+.bar{
+    background-color: green;
+    width: 0;
+    border: 0;
+    height: inherit;
+    
+}
+
+
+.progress-2{
+    
+    width: 100%;
+    
+}
+
+
+.text-bar{
+    position: absolute;
+    left: 48%;
+    margin-top: 10px;
+    
+}
+
+.white-text{
+    color: white;
+}
+
+
+.file-manager{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.file-manager-bar{
+    background-color: #be7c10;
+}
+
+
+
+.delete-item{
+    content: '+';
+    color: rgb(179, 4, 4);
+    transform: rotateZ(45deg);
+    font-size: 1.5em;
+}
+
