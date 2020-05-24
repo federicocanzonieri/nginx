@@ -123,7 +123,7 @@ function loadMovies(delay){
                         <div class="title-data white-txt" > ' +movie.anno + '</div>\
                         <div class="title-testo white-txt">'+ movie.durata +' </div>  \
                     </div>\
-                    <img src=images/"'+ movie.url +'">\
+                    <img src=images/'+ movie.url +'>\
                 </div>';
 
 }
