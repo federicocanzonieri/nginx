@@ -6,6 +6,7 @@ USER root
 RUN  apt-get update
 RUN apt-get install sudo 
 RUN sudo apt-get update && sudo  apt-get install php -y 
+USER jenkins
 EXPOSE 8080
 #entry point diverso?
 #CMD [ "php", "-v"]
