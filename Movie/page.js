@@ -47,14 +47,6 @@ function documentReady(){
         console.log("Mi hanno cliccato");
         loadMovies(3);
     } )
-
-
-
-
-    
-
-
-
 } 
 
 function loadMovies(delay){
@@ -83,7 +75,7 @@ function loadMovies(delay){
 
 
     ] ;
-    $.get( "/function.php", { name: "retrieveAll" } )
+    $.get( "/function.php", { "tipo": "retrieveAll" } )
         .done(function( data ) {
           alert( "Data Loaded: " + data );
     });
