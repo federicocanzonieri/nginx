@@ -116,6 +116,7 @@ function closeConnDb(){
 
 writeMsg();
 getDbCredentials();
+writeMsg();
 getConnDb();
 
 
