@@ -1,3 +1,4 @@
+<?php
 $dbhost;  //getenv("MARIADB_34_SERVICE_HOST");
 $dbport; 
 $dbuser; 
@@ -152,6 +153,6 @@ function testProdotto(){
 //mysql -u root -p
 //my_password
 //alter user 'username'@'localhost' identified with mysql_native_password by 'password'
-
+?>
 
 
