@@ -126,8 +126,8 @@ if(isset($_GET['tipo'])) {
         elseif($_GET['function'] == 'two') {
             //function two() // call function two
         }
-    }
 }
+
 //mysql -u root -p
 //my_password
 //alter user 'username'@'localhost' identified with mysql_native_password by 'password'
