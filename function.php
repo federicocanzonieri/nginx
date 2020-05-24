@@ -120,7 +120,7 @@ function testProdotto(){
 if(isset($_GET['tipo'])) {
         if($_GET['tipo'] == 'retrieveAll') {
             //richiamare le altre conn e compagnia cantante
-            return "DIOOOOOO";
+            echo "DIOOOOOO";
             //showResult(); // call function one
         } 
         elseif($_GET['function'] == 'two') {
