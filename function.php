@@ -11,7 +11,8 @@ $connection;
 
 function writeMsg() {
     echo "Hello world!<br>";
-    echo "host: ".getenv("MYSQL_SERVICE_HOST")."<br>";
+    //  MYSQL_SERVICE_HOST
+    echo "host: ".getenv("JENKINS_JNLP_PORT_50000_TCP_PORT")."<br>";
     echo "port: ".getenv("MYSQL_SERVICE_PORT")."<br>";
     echo "user: ".getenv("databaseuser")."<br>";
     echo "password: ".getenv("databasepassword")."<br>";
