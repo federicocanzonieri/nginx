@@ -88,10 +88,13 @@ function insertIntoDb(){
 function showResult(){
     global $connection;
     $sql = "SELECT * FROM  Movie ";
+    $array = array();
     $result = mysqli_query($connection, $sql); // First parameter is just return of "mysqli_connect()" function
     echo "<div>Benvenuto alla pagina sullo store ci sono attualmente questi film:</div>";
     while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
         echo "-->";
+        echo $row."<br>";
+        $array[] = $row;
         /*foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
             echo " " . $value . " , "; // I just did not use "htmlspecialchars()" function. 
         }*/
@@ -101,6 +104,7 @@ function showResult(){
         echo "\n";
     }
     echo "<br>Vai alla pagina migliore /Movie/movie.html e guarda là<br> ";
+    print_r($array);
 }
     
     
