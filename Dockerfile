@@ -4,9 +4,7 @@ FROM jenkins
 #FROM selenium/standalone-chrome-debug:latest
 USER root
 RUN  apt-get update
-
 RUN apt-get install sudo 
-
 RUN sudo apt-get update && sudo  apt-get install php -y 
 EXPOSE 8080
 #entry point diverso?
