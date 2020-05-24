@@ -172,9 +172,9 @@ CreateTableDb();
 insertIntoDb();
 showResult();
 
-echo "<p> TESTING PROVA </p><br>";
-echo testSomma()."<br>";
-echo testProdotto()."<br>";
+//echo "<p> TESTING PROVA </p><br>";
+//echo testSomma()."<br>";
+//echo testProdotto()."<br>";
 
 
 
