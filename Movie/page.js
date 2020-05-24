@@ -83,7 +83,7 @@ function loadMovies(delay){
 
 
     ] ;
-    $.get( "function.php", { name: "retrieveAll" } )
+    $.get( "/function.php", { name: "retrieveAll" } )
         .done(function( data ) {
           alert( "Data Loaded: " + data );
     });
