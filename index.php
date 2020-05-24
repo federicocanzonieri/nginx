@@ -92,8 +92,11 @@ function showResult(){
     echo "<div>Benvenuto alla pagina sullo store ci sono attualmente questi film:</div>";
     while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
         echo "-->";
-        foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
+        /*foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
             echo " " . $value . " , "; // I just did not use "htmlspecialchars()" function. 
+        }*/
+        foreach($row as $value){
+           echo "riga".$value."<br>";   
         }
         echo "\n";
     }
