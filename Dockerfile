@@ -1,7 +1,4 @@
-FROM jenkins/jenkins:lts
-#RUN apt-get update &&  apt-get install php -y 
-
-#FROM selenium/standalone-chrome-debug:latest
+FROM jenkins
 USER root
 RUN  apt-get update
 RUN apt-get install sudo 
