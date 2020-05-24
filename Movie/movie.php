@@ -61,7 +61,7 @@
                 <div class="container">
                     <div class="row-title col-lg-3 active" >Ultimi Aggiornamenti</div>
                 </div>
-                <div class="card col-lg-3">
+                <!-- <div class="card col-lg-3">
                     <div class="movie-summary">
                         <div class="movie-play">
                             <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
@@ -111,12 +111,13 @@
                  <div class="card col-lg-3">
                     <img src="images/300.png">
                 </div>
-               
+               -->
             </div>
             <div class="container">
                 <div class="container">
                     <div class="row-title col-lg-3 active" >Dalla A alla Z</div>
                 </div>
+                <!--
                 <div class="card col-lg-3">
                     <img src="images/wick.png">
                     
@@ -132,7 +133,7 @@
                  <div class="card col-lg-3">
                     <img src="images/300.png">
                 </div>
-               
+                 -->
             </div>
     </div>
    
