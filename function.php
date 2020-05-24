@@ -37,11 +37,11 @@ function getConnDb(){
 function CreateTableDb(){
     global $connection;
     $sql = "CREATE TABLE Movie (
-    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(30) NOT NULL,
-    trama VARCHAR(255) NOT NULL,
-    anno INT(6),
-    durata VARCHAR(10)
+        id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        title VARCHAR(30) NOT NULL,
+        trama VARCHAR(255) NOT NULL,
+        anno INT(6),
+        durata VARCHAR(10)
     )";
     if ($connection->query($sql) === TRUE) {
         echo "Table MOVIE created successfully";
@@ -50,26 +50,6 @@ function CreateTableDb(){
         echo "   Error creating table: " . $conn->error . "<br>";
     }
 }
-/*if ($connection->connect_errno) {
-    printf("  Connect failed: %s\n", $mysqli->connect_error);
-    exit();
-} 
-else {
-    printf("Connected to the database");
-    $sql = "CREATE TABLE Movie (
-    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(30) NOT NULL,
-    trama VARCHAR(255) NOT NULL,
-    anno INT(6),
-    durata VARCHAR(10)
-    )";
-    if ($connection->query($sql) === TRUE) {
-        echo "Table MOVIE created successfully";
-    } 
-    else {
-        echo "   Error creating table: " . $conn->error . "<br>";
-    }
-    */
 function insertIntoDb(){
      global $connection;
      $sql = "INSERT INTO Movie (id,title, trama, anno,durata) VALUES
@@ -109,21 +89,7 @@ function showResult(){
 }
     
     
-   /*$sql = "SELECT * FROM  Movie ";
-   $result = mysqli_query($connection, $sql); // First parameter is just return of "mysqli_connect()" function
-    
-   echo "<div>Benvenuto alla pagina sullo store ci sono attualmente questi film:</div>";
-    while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
-        echo "-->";
-        foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
-            echo " " . $value . " , "; // I just did not use "htmlspecialchars()" function. 
-        }
-        echo "\n";
-    }
-    echo "<br>Vai alla pagina migliore /Movie/movie.html e guarda là<br> ";
-    
-    }
-    */
+
 function closeConnDb(){
     $connection->close();    
 }
