@@ -5,7 +5,7 @@ $dbport;
 $dbuser; 
 $dbpwd; 
 $dbname;
-
+$connection;
 
 function writeMsg() {
     echo "Hello world!<br>";
@@ -35,8 +35,8 @@ function getConnDb(){
         printf("Connected to the database");
     }
 }
-function getCreateTable(){
-    
+function CreateTableDb(){
+    global $connection;
     $sql = "CREATE TABLE Movie (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(30) NOT NULL,
@@ -72,6 +72,7 @@ else {
     }
     */
 function insertIntoDb(){
+     global $connection;
      $sql = "INSERT INTO Movie (id,title, trama, anno,durata) VALUES
      (1,'John Wick', 'John Wick sta per scatenare l inferno in terra ...', 2019,'2h 23min'),
      (2,'Avengers End game', 'Viaggi nel tempo è l unica cosa che ci mancava', 2019,'3h 23min'),
@@ -85,6 +86,7 @@ function insertIntoDb(){
 }
 
 function showResult(){
+    global $connection;
     $sql = "SELECT * FROM  Movie ";
     $result = mysqli_query($connection, $sql); // First parameter is just return of "mysqli_connect()" function
     echo "<div>Benvenuto alla pagina sullo store ci sono attualmente questi film:</div>";
@@ -149,8 +151,10 @@ function testProdotto(){
 writeMsg();
 getDbCredentials();
 writeMsg();
-//getConnDb();
-
+getConnDb();
+CreateTableDb();
+insertIntoDb();
+showResult();
 
 echo "<p> TESTING PROVA </p><br>";
 echo testSomma()."<br>";
