@@ -143,5 +143,7 @@
     
 
     <script src="page.js"></script>
+    <script src="jquery-3.5.0.min.js"></script>
+    
 </body>
 </html>
