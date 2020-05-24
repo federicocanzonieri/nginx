@@ -75,9 +75,10 @@ function loadMovies(delay){
 
 
     ] ;
+   var php_respo=[{}];
     $.get( "/function.php", { "tipo": "retrieveAll" } )
         .done(function( data ) {
-          alert( "Data Loaded: " + data );
+          console.log( "Data Loaded: " + JSON.parse(data) );
     });
 
 
