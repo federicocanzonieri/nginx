@@ -120,7 +120,7 @@ function testProdotto(){
 if(isset($_GET['tipo'])) {
         if($_GET['tipo'] == 'retrieveAll') {
             //richiamare le altre conn e compagnia cantante
-            echo "DIOOrOOOO";
+            //echo "DIOOrOOOO";
             getDbCredentials();
             getConnDb();
             showResult(); // call function one
