@@ -6,6 +6,9 @@ $dbpwd;
 $dbname;
 $connection;
 
+
+
+
 function writeMsg() {
     echo "Hello world!<br>";
     echo "host: ".getenv("MYSQL_SERVICE_HOST")."<br>";
@@ -114,8 +117,17 @@ function testProdotto(){
     throw new Exception("TEST FAILED PROD");
 }
 
-
-
+if(isset($_GET['tipo'])) {
+        if($_GET['tipo'] == 'retrieveAll') {
+            //richiamare le altre conn e compagnia cantante
+            
+            showResult(); // call function one
+        } 
+        elseif($_GET['function'] == 'two') {
+            //function two() // call function two
+        }
+    }
+}
 //mysql -u root -p
 //my_password
 //alter user 'username'@'localhost' identified with mysql_native_password by 'password'
