@@ -146,7 +146,7 @@ function testProdotto(){
 writeMsg();
 getDbCredentials();
 writeMsg();
-getConnDb();
+//getConnDb();
 
 
 echo "<p> TESTING PROVA </p><br>";
