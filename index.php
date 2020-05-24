@@ -1,4 +1,7 @@
 <?php
+
+include 'function.php';
+
 /*
 $dbhost;  //getenv("MARIADB_34_SERVICE_HOST");
 $dbport; 
@@ -99,6 +102,7 @@ function showResult(){
         /*foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
             echo " " . $value . " , "; // I just did not use "htmlspecialchars()" function. 
         }*/
+/*
         foreach($row as $value){
            echo "riga".$value."<br>";   
         }
@@ -108,6 +112,7 @@ function showResult(){
     print_r($array);
     echo "<br>";
     echo json_encode($array);
+  
 }
     */
     
