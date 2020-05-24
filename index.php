@@ -150,8 +150,8 @@ writeMsg();
 
 
 echo "<p> TESTING PROVA </p><br>";
-testSomma();
-testProdotto();
+echo testSomma()."<br>";
+echo testProdotto()."<br>";
 
 
 
