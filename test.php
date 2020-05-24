@@ -1,6 +1,6 @@
 <?php
   
-  include 'function.php'
+  include 'function.php';
   
   
   writeMsg();
