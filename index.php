@@ -2,10 +2,10 @@
 
 function writeMsg() {
     echo "Hello world!<br>";
-    echo "host".getenv("MYSQL_SERVICE_HOST")."<br>";
-    echo "user".getenv("MYSQL_SERVICE_PORT")."<br>";
-    echo "pass".getenv("databaseuser")."<br>";
-    echo "name".getenv("databasepassword")."<br>";
+    echo "host: ".getenv("MYSQL_SERVICE_HOST")."<br>";
+    echo "user: ".getenv("MYSQL_SERVICE_PORT")."<br>";
+    echo "pass: ".getenv("databaseuser")."<br>";
+    echo "name: ".getenv("databasepassword")."<br>";
 }
 function getDbCredentials(){
     $dbhost =getenv("MYSQL_SERVICE_HOST");  //getenv("MARIADB_34_SERVICE_HOST");
