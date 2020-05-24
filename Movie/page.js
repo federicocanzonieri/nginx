@@ -62,7 +62,7 @@ function loadMovies(delay){
         durata: "2h 23min",
         trama: "John wick è un maniaco criminale che soltanto perche gli hanno ammazzato il cane devasta mezza citta",
         categories:["Azione" ,"CRime" ,"Thriller"  ],
-        //cover: "images/wick.png"
+        url: "images/wick.png"
      } ,
      {
         title: "Avengers BEGIN GAME",
@@ -70,7 +70,7 @@ function loadMovies(delay){
         durata: "4h 23min",
         trama: "Steve roger is dead just like the others cane devasta mezza citta",
         categories:["Thriller"  ],
-        //cover: "images/avengers.png"
+        url: "images/avengers.png"
      } 
 
 
@@ -123,7 +123,7 @@ function loadMovies(delay){
                         <div class="title-data white-txt" > ' +movie.anno + '</div>\
                         <div class="title-testo white-txt">'+ movie.durata +' </div>  \
                     </div>\
-                    <img src="images/avengers.png">\
+                    <img src=images/"'+ movie.url +'">\
                 </div>';
 
 }
