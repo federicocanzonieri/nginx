@@ -119,6 +119,24 @@ function closeConnDb(){
 }
 
 
+function somma($a,$b){
+    return $a+$b;
+}
+
+function prodotto($a,$b){
+    return $a*$b;
+}
+
+function testSomma(){
+    return somma(2,2)==4;
+}
+
+function testProdotto($a,$b){
+    return prodotto(4,4)==16;
+}
+
+
+
 //mysql -u root -p
 //my_password
 //alter user 'username'@'localhost' identified with mysql_native_password by 'password'
@@ -131,7 +149,9 @@ writeMsg();
 getConnDb();
 
 
-
+echo "<p> TESTING PROVA </p><br>";
+echo testSomma()."<br>";
+echo testProdotto()."<br>";
 
 
 
