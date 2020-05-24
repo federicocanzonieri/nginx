@@ -25,7 +25,7 @@ function getDbCredentials(){
     $dbname = getenv("databasename");
 }
 function getConnDb(){
-    global $dbhost,$dbport,$dbuser,$dbpwd,$dbname,$connection
+    global $dbhost,$dbport,$dbuser,$dbpwd,$dbname,$connection;
     $connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
     if ($connection->connect_errno) {
         printf("  Connect failed: %s\n", $mysqli->connect_error);
