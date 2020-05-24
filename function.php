@@ -30,11 +30,11 @@ function getConnDb(){
     global $dbhost,$dbport,$dbuser,$dbpwd,$dbname,$connection;
     $connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
     if ($connection->connect_errno) {
-        printf("  Connect failed: %s\n", $mysqli->connect_error);
+        //printf("  Connect failed: %s\n", $mysqli->connect_error);
         exit();
     } 
     else {
-        printf("Connected to the database");
+        //printf("Connected to the database");
     }
 }
 function CreateTableDb(){
@@ -72,22 +72,22 @@ function showResult(){
     $sql = "SELECT * FROM  Movie ";
     $array = array();
     $result = mysqli_query($connection, $sql); // First parameter is just return of "mysqli_connect()" function
-    echo "<div>Benvenuto alla pagina sullo store ci sono attualmente questi film:</div>";
+   // echo "<div>Benvenuto alla pagina sullo store ci sono attualmente questi film:</div>";
     while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
-        echo "-->";
-        echo $row."<br>";
+        //echo "-->";
+       // echo $row."<br>";
         $array[] = $row;
         /*foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
             echo " " . $value . " , "; // I just did not use "htmlspecialchars()" function. 
         }*/
         foreach($row as $value){
-           echo "riga".$value."<br>";   
+           //echo "riga".$value."<br>";   
         }
-        echo "\n";
+        //echo "\n";
     }
-    echo "<br>Vai alla pagina migliore /Movie/movie.html e guarda là<br> ";
-    print_r($array);
-    echo "<br>";
+    //echo "<br>Vai alla pagina migliore /Movie/movie.html e guarda là<br> ";
+    //print_r($array);
+    //echo "<br>";
     echo json_encode($array);
 }
     
@@ -120,8 +120,10 @@ function testProdotto(){
 if(isset($_GET['tipo'])) {
         if($_GET['tipo'] == 'retrieveAll') {
             //richiamare le altre conn e compagnia cantante
-            echo "DIOOOOOO";
-            //showResult(); // call function one
+            echo "DIOOrOOOO";
+            getDbCredentials();
+            getConnDb();
+            showResult(); // call function one
         } 
         elseif($_GET['function'] == 'two') {
             //function two() // call function two
