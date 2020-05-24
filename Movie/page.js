@@ -79,6 +79,11 @@ function loadMovies(delay){
     $.get( "/function.php", { "tipo": "retrieveAll" } )
         .done(function( data ) {
           console.log( "Data Loaded: " + JSON.parse(data) );
+          console.log( JSON.parse(data) );
+          console.log( JSON.parse(data)[0] );
+          php_respo=JSON.parse(data);
+          console.log( php_respo );
+         
     });
 
 
@@ -120,7 +125,7 @@ function loadMovies(delay){
                 </div>'
 
 }
-console.log(html)
+//console.log(html)
 $row.innerHTML = html;
 $container.appendChild($row);
 $listaUltimiAggiornati.innerHTML="";
