@@ -105,6 +105,11 @@ function closeConnDb(){
     $connection->close();    
 }
 
+function dropTable(){
+    global $connection;
+    $sql = "DROP TABLE IF EXISTS  Movie ";
+    $result = mysqli_query($connection, $sql); 
+}
 
 function somma($a,$b){
     return $a+$b;
