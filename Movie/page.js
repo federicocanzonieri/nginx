@@ -109,7 +109,7 @@ function loadMovies(delay){
     for( var movie of serverResponse){
         
         
-        html += '<div class="card col-lg-3">\
+        html += '<div class="card mb-30 col-lg-3">\
                     <div class="movie-summary">\
                         <div class="movie-play">\
                             <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">\
