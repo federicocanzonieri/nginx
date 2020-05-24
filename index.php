@@ -1,5 +1,5 @@
 <?php
-
+/*
 $dbhost;  //getenv("MARIADB_34_SERVICE_HOST");
 $dbport; 
 $dbuser; 
@@ -71,6 +71,7 @@ else {
         echo "   Error creating table: " . $conn->error . "<br>";
     }
     */
+/*
 function insertIntoDb(){
      global $connection;
      $sql = "INSERT INTO Movie (id,title, trama, anno,durata) VALUES
@@ -108,7 +109,7 @@ function showResult(){
     echo "<br>";
     echo json_encode($array);
 }
-    
+    */
     
    /*$sql = "SELECT * FROM  Movie ";
    $result = mysqli_query($connection, $sql); // First parameter is just return of "mysqli_connect()" function
@@ -125,6 +126,7 @@ function showResult(){
     
     }
     */
+/*
 function closeConnDb(){
     $connection->close();    
 }
@@ -149,7 +151,7 @@ function testProdotto(){
     throw new Exception("TEST FAILED PROD");
 }
 
-
+*/
 
 //mysql -u root -p
 //my_password
