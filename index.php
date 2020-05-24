@@ -1,5 +1,12 @@
 <?php
 
+$dbhost;  //getenv("MARIADB_34_SERVICE_HOST");
+$dbport; 
+$dbuser; 
+$dbpwd; 
+$dbname;
+
+
 function writeMsg() {
     echo "Hello world!<br>";
     echo "host: ".getenv("MYSQL_SERVICE_HOST")."<br>";
@@ -10,6 +17,7 @@ function writeMsg() {
     
 }
 function getDbCredentials(){
+    global $dbhost,$dbport,$dbuser,$dbpwd,$dbname;
     $dbhost =getenv("MYSQL_SERVICE_HOST");  //getenv("MARIADB_34_SERVICE_HOST");
     $dbport = getenv("MYSQL_SERVICE_PORT");
     $dbuser = getenv("databaseuser");
@@ -17,6 +25,7 @@ function getDbCredentials(){
     $dbname = getenv("databasename");
 }
 function getConnDb(){
+    global $dbhost,$dbport,$dbuser,$dbpwd,$dbname;
     $connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
     if ($connection->connect_errno) {
         printf("  Connect failed: %s\n", $mysqli->connect_error);
