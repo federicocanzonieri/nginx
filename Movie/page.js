@@ -58,19 +58,19 @@ function loadMovies(delay){
     var serverResponse= [
      {
         title: "John Wick 4 - Finale",
-        year: 2019,
-        time: "2h 23min",
-        plot: "John wick è un maniaco criminale che soltanto perche gli hanno ammazzato il cane devasta mezza citta",
+        anno: 2019,
+        durata: "2h 23min",
+        trama: "John wick è un maniaco criminale che soltanto perche gli hanno ammazzato il cane devasta mezza citta",
         categories:["Azione" ,"CRime" ,"Thriller"  ],
-        cover: "images/wick.png"
+        //cover: "images/wick.png"
      } ,
      {
         title: "Avengers BEGIN GAME",
-        year: 2025,
-        time: "4h 23min",
-        plot: "Steve roger is dead just like the others cane devasta mezza citta",
+        anno: 2025,
+        durata: "4h 23min",
+        trama: "Steve roger is dead just like the others cane devasta mezza citta",
         categories:["Thriller"  ],
-        cover: "images/avengers.png"
+        //cover: "images/avengers.png"
      } 
 
 
@@ -81,6 +81,8 @@ function loadMovies(delay){
           console.log( "Data Loaded: " + JSON.parse(data) );
           console.log( JSON.parse(data) );
           console.log( JSON.parse(data)[0] );
+          serverResponse.push(JSON.parse(data)[0]);
+          serverResponse.push(JSON.parse(data)[1]);
           php_respo=JSON.parse(data);
           console.log( php_respo );
          
@@ -118,11 +120,11 @@ function loadMovies(delay){
                             </svg>  \
                         </div>      \
                         <div class="title-summary white-txt "> '+movie.title+ '</div>\
-                        <div class="title-data white-txt" > ' +movie.year + '</div>\
-                        <div class="title-testo white-txt">'+ movie.time +' </div>  \
+                        <div class="title-data white-txt" > ' +movie.anno + '</div>\
+                        <div class="title-testo white-txt">'+ movie.durata +' </div>  \
                     </div>\
-                    <img src='+movie.cover+'>\
-                </div>'
+                    <img src="images/avengers.png">\
+                </div>';
 
 }
 //console.log(html)
