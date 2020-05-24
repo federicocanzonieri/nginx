@@ -87,7 +87,7 @@ function loadMovies(delay){
           console.log( php_respo );
           for(let mov of php_respo){
               console.log(mov);
-              //serverResponse.push(JSON.parse(data)[0]);
+              serverResponse.push(mov);
           
           }
          
