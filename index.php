@@ -168,6 +168,7 @@ writeMsg();
 getDbCredentials();
 writeMsg();
 getConnDb();
+dropTable();
 CreateTableDb();
 insertIntoDb();
 showResult();
