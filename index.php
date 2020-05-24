@@ -105,6 +105,8 @@ function showResult(){
     }
     echo "<br>Vai alla pagina migliore /Movie/movie.html e guarda là<br> ";
     print_r($array);
+    echo "<br>";
+    echo json_encode($array);
 }
     
     
