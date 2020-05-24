@@ -107,9 +107,23 @@ function closeConnDb(){
     $connection->close();    
 }
 
+
 //mysql -u root -p
 //my_password
 //alter user 'username'@'localhost' identified with mysql_native_password by 'password'
+
+
+
+writeMsg();
+getDbCredentials();
+getConnDb();
+
+
+
+
+
+
+
 
 ?>
 <html> 
