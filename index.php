@@ -129,7 +129,7 @@ function prodotto($a,$b){
 
 function testSomma(){
     if(somma(2,2)==5)return 1;
-    return throw new Exception("TEST FAILED");
+    throw new Exception("TEST FAILED");
     //return somma(2,2)==4;
 }
 
