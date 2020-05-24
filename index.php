@@ -131,7 +131,7 @@ function testSomma(){
     return somma(2,2)==4;
 }
 
-function testProdotto($a,$b){
+function testProdotto(){
     return prodotto(4,4)==16;
 }
 
@@ -150,8 +150,8 @@ getConnDb();
 
 
 echo "<p> TESTING PROVA </p><br>";
-echo testSomma()."<br>";
-echo testProdotto()."<br>";
+testSomma();
+testProdotto();
 
 
 
