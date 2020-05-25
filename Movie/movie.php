@@ -2,13 +2,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
     <title>Document</title>
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
-
 <body onload="documentReady()">
     <nav>
         <div class="brand">
@@ -61,79 +58,11 @@
                 <div class="container">
                     <div class="row-title col-lg-3 active" >Ultimi Aggiornamenti</div>
                 </div>
-                <!-- <div class="card col-lg-3">
-                    <div class="movie-summary">
-                        <div class="movie-play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
-                                <g id="Group_47" data-name="Group 47" transform="translate(-90 -807)">
-                                <g id="Ellipse_276" data-name="Ellipse 276" transform="translate(90 807)" fill="none" stroke="#fff" stroke-width="3">
-                                    <circle cx="21" cy="21" r="21" stroke="none"/>
-                                    <circle cx="21" cy="21" r="19.5" fill="none"/>
-                                </g>
-                                <g id="surface1" transform="translate(106.615 821.22)">
-                                    <path id="Path_294" data-name="Path 294" d="M7,5V18.771l11.8-6.886Z" transform="translate(-7 -5)" fill="#fff"/>
-                                </g>
-                                </g>
-                            </svg>  
-                        </div>      
-                       <div class="title-summary white-txt ">John wick parabellum</div>
-                       
-                       <div class="title-data white-txt">2019    2h23min</div>                  
-                       <div class="title-testo white-txt">John Wick è in fuga per due ragioni: una
-                            taglia di 14 milioni di dollari e per aver
-                            infranto una delle regole fondamentali,
-                            uccidere qualcuno all'interno dell'Hotel...      
-                        </div>  
-                        <div class="title-tags">
-                            <button class="title-tag white-txt ">
-                                Action
-                            </button>  
-                            <button class="title-tag white-txt ">
-                                Crime
-                            </button>   
-                            <button class="title-tag white-txt ">
-                                Thriller
-                            </button>   
-                        </div>      
-                    </div>
-                    <img src="images/wick.png">
-                    
-                </div>  
-                <div class="card col-lg-3">
-                    
-                    <img src="images/matrix.png">
-                    
-                </div>
-                <div class="card col-lg-3">
-                    <img src="images/avengers.png">
-                    
-                </div>
-                 <div class="card col-lg-3">
-                    <img src="images/300.png">
-                </div>
-               -->
             </div>
             <div class="container">
                 <div class="container">
                     <div class="row-title col-lg-3 active" >Dalla A alla Z</div>
                 </div>
-                <!--
-                <div class="card col-lg-3">
-                    <img src="images/wick.png">
-                    
-                </div>  
-                <div class="card col-lg-3">
-                    <img src="images/matrix.png">
-                    
-                </div>
-                <div class="card col-lg-3">
-                    <img src="images/avengers.png">
-                    
-                </div>
-                 <div class="card col-lg-3">
-                    <img src="images/300.png">
-                </div>
-                 -->
             </div>
     </div>
    
@@ -141,10 +70,7 @@
        <img  src="images/logo.svg">
          asdas
     </div>
-    
-
     <script src="page.js"></script>
     <script src="jquery-3.5.0.min.js"></script>
-    
 </body>
 </html>
