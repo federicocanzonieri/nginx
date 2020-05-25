@@ -141,8 +141,8 @@ function countDbRow(){
     $row = mysqli_fetch_assoc($result);
     $count = $row['count'];
     //echo $result['conta'];
-    echo "Count Test->". $count ."\n";
-    print_r($result);
+    //echo "Count Test->". $count ."\n";
+    //print_r($result);
     return $count;
 }
 
@@ -159,16 +159,19 @@ function getRowsDb(){
     global $connection;
     $sql = "SELECT id,title FROM  Movie LIMIT 2";
     $result = mysqli_query($connection, $sql); 
-    $row = mysqli_fetch_assoc($result);
-    echo "Rows test->".$row['id']." ". $row['title'] ."\n";
-     $row = mysqli_fetch_assoc($result);
-    echo "Rows test->".$row['id']." ". $row['title'] ."\n";
+    //$row = mysqli_fetch_assoc($result);
+    //echo "Rows test->".$row['id']." ". $row['title'] ."\n";
+     //$row = mysqli_fetch_assoc($result);
+    //echo "Rows test->".$row['id']." ". $row['title'] ."\n";
     
-    print_r($result);
+    //print_r($result);
     //echo $result['id'];
+    return $result;
 }
 function testGetRowsDb(){
-    if(getRowsDb()){
+    $test=getRowsDb();
+    $row = mysqli_fetch_assoc($result);
+    if($row['title']=="John Wick"){
         echo "TEST PASSED";
     }
     else {
