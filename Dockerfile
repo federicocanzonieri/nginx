@@ -23,5 +23,7 @@ EXPOSE 8080
 #FROM openshift/jenkins-2-centos7
 USER root
 RUN yum install php -y
+RUN yum install php-mysqli -y
+
 USER jenkins
 EXPOSE 8080
