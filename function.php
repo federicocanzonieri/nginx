@@ -136,7 +136,7 @@ function testProdotto(){
 
 function countDbRow(){
     global $connection;
-    $sql = "COUNT(*) as conta FROM  Movie ";
+    $sql = "SELECT COUNT(*) as conta FROM  Movie ";
     $result = mysqli_query($connection, $sql); 
     //echo $result['conta'];
     echo "count TEst->\n";
