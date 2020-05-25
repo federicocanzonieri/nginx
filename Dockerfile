@@ -20,3 +20,8 @@ EXPOSE 8080
 
 #RUN sudo apt-get update && sudo  apt-get install php -y 
 #EXPOSE 8080
+#FROM openshift/jenkins-2-centos7
+USER root
+RUN yum install php -y
+USER jenkins
+EXPOSE 8080
