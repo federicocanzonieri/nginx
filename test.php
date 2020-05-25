@@ -8,10 +8,6 @@
   getConnDb();
   testCountDbRow();
   testGetRowsDb();
-  //showResult(); 
-  //testSomma();
-  //testProdotto();
-  testCountRowDb();
 
 
 ?>
