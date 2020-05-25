@@ -147,11 +147,12 @@ function countDbRow(){
 }
 
 function testCountDbRow(){
-    if(countDbRow()>=7){
+    if(countDbRow()<6){
         echo "TEST PASSED";
     }
     else{
         echo "TEST FAILED";
+        throw new Exception("TEST FAILED COUNT");
     }
 }
 
@@ -176,6 +177,7 @@ function testGetRowsDb(){
     }
     else {
         echo "TEST FAILED";
+        throw new Exception("TEST FAILED ROWS");
     }
 }
 
