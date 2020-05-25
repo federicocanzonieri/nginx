@@ -130,6 +130,37 @@ function testProdotto(){
     throw new Exception("TEST FAILED PROD");
 }
 
+function countDbRow(){
+    global $connection;
+    $sql = "COUNT(*) FROM  Movie ";
+    $result = mysqli_query($connection, $sql); 
+    echo $result;
+}
+
+function testCountDbRow(){
+    if(countDbRow()>=7){
+        echo "TEST PASSED";
+    }
+    else{
+        echo "TEST FAILED";
+    }
+}
+
+function getRowsDb(){
+    global $connection;
+    $sql = "SELECT * FROM  Movie LIMIT 2";
+    $result = mysqli_query($connection, $sql); 
+    echo $result;
+}
+function testGetRowsDb(){
+    if(getRowsDb()){
+        echo "TEST PASSED";
+    }
+    else {
+        echo "TEST FAILED";
+    }
+}
+
 if(isset($_GET['tipo'])) {
         if($_GET['tipo'] == 'retrieveAll') {
             //richiamare le altre conn e compagnia cantante
