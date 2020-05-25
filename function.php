@@ -138,7 +138,7 @@ function countDbRow(){
     global $connection;
     $sql = "SELECT COUNT(*) as count FROM  Movie ";
     $result = mysqli_query($connection, $sql); 
-    $row = mysql_fetch_assoc($result);
+    $row = mysqli_fetch_assoc($result);
     $count = $row['count'];
     //echo $result['conta'];
     echo "Count Test->". $count ."\n";
@@ -159,9 +159,9 @@ function getRowsDb(){
     global $connection;
     $sql = "SELECT id,title FROM  Movie LIMIT 2";
     $result = mysqli_query($connection, $sql); 
-    $row = mysql_fetch_assoc($result);
+    $row = mysqli_fetch_assoc($result);
     echo "Rows test->".$row['id']." ". $row['title'] ."\n";
-     $row = mysql_fetch_assoc($result);
+     $row = mysqli_fetch_assoc($result);
     echo "Rows test->".$row['id']." ". $row['title'] ."\n";
     
     print_r($result);
