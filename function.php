@@ -169,7 +169,7 @@ function getRowsDb(){
     return $result;
 }
 function testGetRowsDb(){
-    $test=getRowsDb();
+    $result=getRowsDb();
     $row = mysqli_fetch_assoc($result);
     if($row['title']=="John Wick"){
         echo "TEST PASSED";
