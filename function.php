@@ -136,11 +136,14 @@ function testProdotto(){
 
 function countDbRow(){
     global $connection;
-    $sql = "SELECT COUNT(*) as conta FROM  Movie ";
+    $sql = "SELECT COUNT(*) as count FROM  Movie ";
     $result = mysqli_query($connection, $sql); 
+    $row = mysql_fetch_assoc($result);
+    $count = $row['count'];
     //echo $result['conta'];
-    echo "count TEst->\n";
+    echo "Count Test->". $count ."\n";
     print_r($result);
+    return $count;
 }
 
 function testCountDbRow(){
@@ -154,9 +157,13 @@ function testCountDbRow(){
 
 function getRowsDb(){
     global $connection;
-    $sql = "SELECT id FROM  Movie LIMIT 2";
+    $sql = "SELECT id,title FROM  Movie LIMIT 2";
     $result = mysqli_query($connection, $sql); 
-    echo "rows test->\n";
+    $row = mysql_fetch_assoc($result);
+    echo "Rows test->".$row['id']." ". $row['title'] ."\n";
+     $row = mysql_fetch_assoc($result);
+    echo "Rows test->".$row['id']." ". $row['title'] ."\n";
+    
     print_r($result);
     //echo $result['id'];
 }
