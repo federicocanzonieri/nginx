@@ -29,17 +29,9 @@ function getDbCredentials(){
 }
 function getConnDb(){
     global $dbhost,$dbport,$dbuser,$dbpwd,$dbname,$connection;
-    //$connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
+    $connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
     //$connection=mysqli_connect($dbhost,$dbuser,$dbpwd,$dbname);
-    $connection=mysqli_connect($dbhost,"user","user","sampledb");
-    if (!$connection->set_charset("utf8")) {
-        printf("Error loading character set utf8: %s\n", $connection->error);
-        exit();
-    } else {
-        printf("Current character set: %s\n", $connection->character_set_name());
-    }
-    
-    
+    //$connection=mysqli_connect($dbhost,"user","user","sampledb");
     if ($connection->connect_errno) {
         printf("  Connect failed: %s\n", $mysqli->connect_error);
         exit();
