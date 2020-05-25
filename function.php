@@ -139,6 +139,7 @@ function countDbRow(){
     $sql = "COUNT(*) as conta FROM  Movie ";
     $result = mysqli_query($connection, $sql); 
     echo $result['conta'];
+    print_r($result);
 }
 
 function testCountDbRow(){
