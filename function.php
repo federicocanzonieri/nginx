@@ -134,9 +134,9 @@ function testProdotto(){
 
 function countDbRow(){
     global $connection;
-    $sql = "COUNT(*) FROM  Movie ";
+    $sql = "COUNT(*) as conta FROM  Movie ";
     $result = mysqli_query($connection, $sql); 
-    echo $result;
+    echo $result['conta'];
 }
 
 function testCountDbRow(){
@@ -150,9 +150,9 @@ function testCountDbRow(){
 
 function getRowsDb(){
     global $connection;
-    $sql = "SELECT * FROM  Movie LIMIT 2";
+    $sql = "SELECT id FROM  Movie LIMIT 2";
     $result = mysqli_query($connection, $sql); 
-    echo $result;
+    echo $result['id'];
 }
 function testGetRowsDb(){
     if(getRowsDb()){
