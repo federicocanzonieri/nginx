@@ -140,7 +140,7 @@ function countDbRow(){
     $result = mysqli_query($connection, $sql); 
     //echo $result['conta'];
     echo "count TEst->\n";
-    print($result);
+    print_r($result);
 }
 
 function testCountDbRow(){
