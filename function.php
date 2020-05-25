@@ -30,6 +30,8 @@ function getDbCredentials(){
 function getConnDb(){
     global $dbhost,$dbport,$dbuser,$dbpwd,$dbname,$connection;
     $connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
+    $connection = new mysqli($dbhost, "user", "user", "sampledb");
+    
     //$connection=mysqli_connect($dbhost,$dbuser,$dbpwd,$dbname);
     //$connection=mysqli_connect($dbhost,"user","user","sampledb");
     if ($connection->connect_errno) {
