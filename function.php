@@ -35,11 +35,11 @@ function getConnDb(){
     //$connection=mysqli_connect($dbhost,$dbuser,$dbpwd,$dbname);
     //$connection=mysqli_connect($dbhost,"user","user","sampledb");
     if ($connection->connect_errno) {
-        printf("  Connect failed: %s\n", $mysqli->connect_error);
-        exit();
+        //printf("  Connect failed: %s\n", $mysqli->connect_error);
+        //exit();
     } 
     else {
-        printf("Connected to the database");
+       // printf("Connected to the database");
     }
 }
 function CreateTableDb(){
@@ -53,10 +53,10 @@ function CreateTableDb(){
         durata VARCHAR(10)
     )";
     if ($connection->query($sql) === TRUE) {
-        echo "Table MOVIE created successfully";
+        //echo "Table MOVIE created successfully";
     } 
     else {
-        echo "   Error creating table: " . $conn->error . "<br>";
+        //echo "   Error creating table: " . $conn->error . "<br>";
     }
 }
 function insertIntoDb(){
@@ -72,10 +72,10 @@ function insertIntoDb(){
      (8, 'Parasite','Tipo fast and furious',2017,'2h 30min','parasite.jpg')";
       
      if ($connection->query($sql) === TRUE) {
-            echo "<br>New record(s) created successfully<br>";
+           // echo "<br>New record(s) created successfully<br>";
     } 
     else {
-        echo "Error: " . $sql . "<br>" . $conn->error . "<br>";
+        //echo "Error: " . $sql . "<br>" . $conn->error . "<br>";
     }
 }
 
