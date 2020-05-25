@@ -4,9 +4,9 @@
   
   
   writeMsg();
-  testSomma();
-  testProdotto();
-
+  //testSomma();
+  //testProdotto();
+  testCountRowDb();
 
 
 ?>
