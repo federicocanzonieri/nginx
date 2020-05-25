@@ -147,7 +147,7 @@ function countDbRow(){
 }
 
 function testCountDbRow(){
-    if(countDbRow()<6){
+    if(countDbRow()==8){
         echo "TEST PASSED";
     }
     else{
